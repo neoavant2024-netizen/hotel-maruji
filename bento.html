@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="宇都宮ホテル丸治のお届けお弁当のご案内。会議用、お祝い事、ご法要など、様々なシーンに合わせたホテルメイドのお弁当をお届けいたします。">
+  <meta name="keywords" content="宇都宮ホテル丸治,仕出し弁当,宅配弁当,宇都宮お届け弁当,東武宇都宮駅前">
+  
+  <title>お届けお弁当 | 【公式】ホテル丸治｜宇都宮東武駅近くのビジネスホテル・宴会・会議・完全個室でのご法要</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .bento-card {
+      background-color: var(--color-white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: var(--transition);
+      border-bottom: 3px solid var(--color-secondary);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .bento-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .bento-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background-color: #f9f9f9;
+    }
+    
+    .bento-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .bento-title {
+      font-family: var(--font-heading);
+      color: var(--color-primary);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px dashed #eee;
+      padding-bottom: 0.5rem;
+    }
+    
+    .bento-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    
+    .bento-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-secondary);
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="header" style="background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+    <div class="header-container">
+      <div class="logo-area">
+        <a href="index.html" class="logo-link">
+          <img src="images/logo.png" alt="HOTEL MARUJI UTSUNOMIYA" class="site-logo">
+        </a>
+      </div>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" style="color: var(--color-primary);">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html" style="color: var(--color-primary);">トップページ</a></li>
+          <li><a href="banquet.html" style="color: var(--color-primary);">宴会場</a></li>
+          <li><a href="food.html" style="color: var(--color-primary);">お料理</a></li>
+          <li><a href="bento.html" class="active" style="color: var(--color-primary);">お届けお弁当</a></li>
+          <li><a href="breakfast.html" style="color: var(--color-primary);">ブレックファースト</a></li>
+        </ul>
+        <div class="header-contact" style="color: var(--color-primary);">
+          <p class="phone"><i class="fas fa-phone-alt"></i> 028-621-2211</p>
+          <p class="address">〒320-0034 栃木県宇都宮市泉1-22</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header" style="padding-top: 120px; padding-bottom: 40px; background-color: var(--color-bg-alt); text-align: center;">
+    <div class="container">
+      <h1 class="section-title" style="margin-bottom: 0;">お届けお弁当<span>Delivery Bento</span></h1>
+      <p style="margin-top: 1rem; color: var(--color-text-light);">厳選された食材を使用したホテルメイドのお弁当を、ご指定の場所までお届けいたします。</p>
+      
+      <div style="margin-top: 2rem;">
+        <a href="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/img/2025maruji-fax.pdf" target="_blank" class="btn btn-primary" style="background-color: var(--color-secondary); border-color: var(--color-secondary);">
+          <i class="fas fa-file-pdf"></i> FAX注文用紙をダウンロード
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section fade-in">
+      <div class="container">
+        
+        <div class="bento-grid">
+          
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image9.png" alt="すき焼海鮮まぶし弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">すき焼海鮮まぶし弁当</h3>
+              <p class="bento-desc">牛すき煮　煮海鮮ばら散らし寿司　季節旬彩八寸盛　真薯東寺揚　季節魚の柚庵焼　袱紗焼　市松膾<br>季節の盛り込み※写真の内容は変わります。</p>
+              <p class="bento-price">【税込3,500円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image10.png" alt="鰻まぶし幕の内弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">鰻まぶし幕の内弁当</h3>
+              <p class="bento-desc">鰻まぶし御飯　牛炙り焼和風ソース　季節魚の柚庵焼　袱紗焼　市松膾<br>飛龍頭と季節菜の炊き合わせ　季節旬彩八寸盛</p>
+              <p class="bento-price">【税込3,000円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image11.png" alt="牛フィレ銀鱈西京焼弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">牛フィレ銀鱈西京焼弁当</h3>
+              <p class="bento-desc">銀鱈西京焼　鼈甲生姜　花蓮根酢漬　葉地神　和風牛フィレステーキ　付け合わせ野菜<br>飛龍頭と季節菜の炊き合わせ　季節旬彩八寸盛　季節御飯</p>
+              <p class="bento-price">【税込3,500円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image12.png" alt="銀鱈西京焼弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">銀鱈西京焼弁当</h3>
+              <p class="bento-desc">銀鱈西京焼　鼈甲生姜　花蓮根酢漬　葉地神　季節真薯揚げ　飛龍頭と季節菜の炊き合わせ<br>季節旬彩八寸盛　季節御飯</p>
+              <p class="bento-price">【税込2,300円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image13.png" alt="四季彩幕の内弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">四季彩幕の内弁当</h3>
+              <p class="bento-desc">季節御飯　牛すき煮　真薯東寺揚　小芋田楽　じゃこ有馬煮　海老芝煮<br>浅利深川煮　季節菜の炊き合わせ　袱紗焼　白身魚柚庵焼　酢蓮根　合鴨有馬煮<br>鶏治部煮　青味　青菜利久</p>
+              <p class="bento-price">【税込2,500円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image14.png" alt="黒毛和牛しぐれ焼弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">黒毛和牛しぐれ焼弁当</h3>
+              <p class="bento-desc">黒毛和牛しぐれ煮　季節真薯揚　飛龍頭と季節菜の炊き合わせ　季節旬彩八寸盛　季節御飯</p>
+              <p class="bento-price">【税込2,700円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image15.png" alt="上うな重弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">上うな重弁当</h3>
+              <p class="bento-desc">袱紗焼　蓮根伽羅煮　人参旨煮　季節の御漬物</p>
+              <p class="bento-price">【税込3,300円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image15.png" alt="国産特上活うな重弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">国産特上活うな重弁当</h3>
+              <p class="bento-desc">袱紗焼　蓮根伽羅煮　人参旨煮　季節の御漬物　骨せんべい　肝焼付き</p>
+              <p class="bento-price">【税込6,600円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image16.png" alt="ミヤリー弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">ミヤリー弁当</h3>
+              <p class="bento-desc">味彩鶏香草焼　八汐鱒のコンフィー　玉子コンソメ煮　地産地消のガパオ風ライス<br>八汐ポークのミートローフ　栃木季節野菜のピクルス</p>
+              <p class="bento-price">【税込1,500円】</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/il20180211141202/img/image17.png" alt="黄ぶな弁当" class="bento-image">
+            <div class="bento-content">
+              <h3 class="bento-title">黄ぶな弁当</h3>
+              <p class="bento-desc">日光サーモン西京焼　八汐ポークアスパラ八幡巻　鹿沼にら玉子焼　味彩鶏鍬焼<br>干瓢と原木椎茸の御飯　日光湯葉真薯揚げ　飛龍頭と栃木菜の炊き合わせ<br>那須御養卵そぼろ　蒟蒻伽羅煮　新生姜のかき揚げ</p>
+              <p class="bento-price">【税込1,800円】</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h2>ホテル丸治</h2>
+        <p>〒320-0034<br>栃木県宇都宮市泉1-22</p>
+        <p class="footer-phone"><i class="fas fa-phone-alt"></i> 028-621-2211</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>メニュー</h3>
+        <ul>
+          <li><a href="index.html">トップページ</a></li>
+          <li><a href="banquet.html">宴会場</a></li>
+          <li><a href="food.html">お料理</a></li>
+          <li><a href="bento.html">お届けお弁当</a></li>
+          <li><a href="breakfast.html">ブレックファースト</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h3>SNS公式アカウント</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LINE"><i class="fab fa-line"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hotel Maruji. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggle.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeElements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
