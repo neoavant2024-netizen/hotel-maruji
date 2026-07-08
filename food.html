@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=31">
   
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +23,7 @@
     <div class="header-container">
       <div class="logo-area">
         <a href="index.html" class="logo-link">
-          <img src="images/logo.png" alt="HOTEL MARUJI UTSUNOMIYA" class="site-logo">
+          <img src="images/logo.jpg" alt="HOTEL MARUJI UTSUNOMIYA" class="site-logo">
         </a>
       </div>
       
@@ -37,10 +37,10 @@
           <li><a href="banquet.html" style="color: var(--color-primary);">宴会場</a></li>
           <li><a href="food.html" class="active" style="color: var(--color-primary);">お料理</a></li>
           <li><a href="bento.html" style="color: var(--color-primary);">お届けお弁当</a></li>
-          <li><a href="breakfast.html" style="color: var(--color-primary);">ブレックファースト</a></li>
         </ul>
         <div class="header-contact" style="color: var(--color-primary);">
-          <p class="phone"><i class="fas fa-phone-alt"></i> 028-621-2211</p>
+          <p class="phone"><i class="fas fa-phone-alt"></i> <a href="tel:028-621-2211" style="color:inherit; text-decoration:none;">028-621-2211</a></p>
+
           <p class="address">〒320-0034 栃木県宇都宮市泉1-22</p>
         </div>
       </nav>
@@ -65,50 +65,179 @@
         熟練の技術を食材に込めて、ひとつ一つ丁寧に仕上げます。<br>
         和の趣を感じる空間で、四季折々の旬の食材を贅沢に使用したお料理の数々を、<br class="sm-only">心ゆくまでご堪能ください。
       </p>
+      <h3 style="font-family:var(--font-heading); font-size:2.2rem; margin-top:3rem; margin-bottom:0; color:var(--color-primary); border-bottom: 2px solid var(--color-accent); display:inline-block; padding-bottom:0.5rem;">会席料理</h3>
     </section>
 
     <section class="section fade-in" style="padding:0 1rem 6rem; max-width:1100px; margin:0 auto;">
       
-      <!-- Zigzag 1: Kaiseki -->
+            <!-- Zigzag 1: Kaiseki 6500 -->
       <div class="zigzag-row">
         <div class="zigzag-image">
           <div class="auto-slider-container">
-            <div class="auto-slider-track" id="kaiseki-slider">
-              <img src="images/course6500-1.jpg" alt="6500円コース 料理1" class="slider-image">
-              <img src="images/course6500-2.jpg" alt="6500円コース 料理2" class="slider-image">
-              <img src="images/course6500-3.jpg" alt="6500円コース 料理3" class="slider-image">
-              <img src="images/course6500-4.jpg" alt="6500円コース 料理4" class="slider-image">
+            <div class="auto-slider-track" id="kaiseki-slider-6500">
+              <div class="slider-item">
+                <img src="images/course6500-1.jpg" alt="会席料理 6500円" class="slider-image">
+                <div class="slider-caption"><strong>会席料理</strong>6,500円</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-2.jpg" alt="箸附" class="slider-image">
+                <div class="slider-caption"><strong>箸附</strong>雲丹豆富 小メロン 花穂 美味ジュレ</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-3.jpg" alt="前菜七種" class="slider-image">
+                <div class="slider-caption"><strong>前菜七種</strong>サーモン手毬寿司 夏野菜琥珀寄せ 蓮芋サワークリーム和え<br>夏鴨のオレンジ煮 夏の松葉串 磯巻貝 無花果胡麻クリーム</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-4.jpg" alt="向附" class="slider-image">
+                <div class="slider-caption"><strong>向附</strong>鮪 平目昆布〆 湯葉 海老 あしらい一式</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-5.jpg" alt="合肴" class="slider-image">
+                <div class="slider-caption"><strong>合肴</strong>焼き茄子饅頭 餡 卸生姜</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-6.jpg" alt="焼肴" class="slider-image">
+                <div class="slider-caption"><strong>焼肴</strong>豚肩ロースト香味焼 万願寺唐辛子 茗荷</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-7.jpg" alt="焚き合わせ" class="slider-image">
+                <div class="slider-caption"><strong>焚き合わせ</strong>鰻印籠煮 水玉 南瓜 冬瓜 人参</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-8.jpg" alt="油物" class="slider-image">
+                <div class="slider-caption"><strong>油物</strong>鰺梅大葉巻き ヤングコーン ズッキーニ 茶先茄子</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-9.jpg" alt="変わり鉢" class="slider-image">
+                <div class="slider-caption"><strong>変わり鉢</strong>黒毛和牛炙り 香味サラダ ポン酢ジュレ</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-10.jpg" alt="食事" class="slider-image">
+                <div class="slider-caption"><strong>食事</strong>玉蜀黍と海鮮ご飯</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course6500-11.jpg" alt="水物" class="slider-image">
+                <div class="slider-caption"><strong>水物</strong>白桃ムース</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="zigzag-text">
-          <div class="zigzag-subtitle">KAISEKI</div>
-          <h3 class="zigzag-title">ご会席料理</h3>
-          <p class="zigzag-desc">
-            その季節に最も美味しい食材を厳選し、彩り豊かな一品に仕立てます。目で見ても美しく、舌で味わって奥深い。和の技法で引き出された至高のハーモニーをお愉しみいただけます。
-          </p>
-          
-          <div class="plan-list">
-            <div class="plan-item">
-              <div class="plan-header">
-                <div class="plan-name">旬の会席コース <span style="font-size:0.9rem;color:#999;margin-left:0.5rem;font-weight:normal">Seasonal Kaiseki</span></div>
-                <div class="plan-price">6,500円</div>
-              </div>
-              <div style="font-size:0.9rem; color:#555; line-height:1.6;">旬の食材をふんだんに使用した、料理長おすすめの会席コースです。</div>
-            </div>
-            
-            <div class="plan-item">
-              <div class="plan-header">
-                <div class="plan-name">会席くずし <span style="font-size:0.9rem;color:#999;margin-left:0.5rem;font-weight:normal">Kaiseki</span></div>
-                <div class="plan-price">5,500円</div>
-              </div>
-              <div style="font-size:0.9rem; color:#555; line-height:1.6;">先附 / お造り / 焼物 / 煮物 / 揚物 / お食事 / 水菓子</div>
-            </div>
+          <div style="font-size:1.1rem; color:#333; line-height:2.2;">
+            箸附　前菜七種　向附　合肴　焼肴　焚き合わせ<br>
+            油物　変わり鉢　食事　水物　　<span style="font-family:var(--font-heading); font-size:1.6rem; font-weight:bold; color:var(--color-primary);">6,500円</span>
           </div>
         </div>
       </div>
 
-      <!-- Zigzag 2: Banquet -->
+      <!-- Zigzag 2: Kaiseki 5500 -->
+      <div class="zigzag-row fade-in" style="margin-top: 4rem;">
+        <div class="zigzag-image">
+          <div class="auto-slider-container">
+            <div class="auto-slider-track" id="kaiseki-slider-5500">
+              <div class="slider-item">
+                <img src="images/course5500-1.jpg" alt="会席料理 5500円" class="slider-image">
+                <div class="slider-caption"><strong>会席料理</strong>5,500円</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-2.jpg" alt="箸附" class="slider-image">
+                <div class="slider-caption"><strong>箸附</strong>雲丹豆富 小メロン 花穂 美味ジュレ</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-3.jpg" alt="前菜五種" class="slider-image">
+                <div class="slider-caption"><strong>前菜五種</strong>サーモン手毬寿司 夏野菜琥珀寄せ 蓮芋サワークリーム和え<br>夏鴨のオレンジ煮 夏の松葉串</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-4.jpg" alt="向附" class="slider-image">
+                <div class="slider-caption"><strong>向附</strong>鮪 平目昆布〆 湯葉 あしらい一式</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-5.jpg" alt="焼肴" class="slider-image">
+                <div class="slider-caption"><strong>焼肴</strong>豚肩ロースト香味焼 万願寺唐辛子 茗荷</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-6.jpg" alt="焚き合わせ" class="slider-image">
+                <div class="slider-caption"><strong>焚き合わせ</strong>鰻印籠煮 水玉南瓜 冬瓜 人参</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-8.jpg" alt="油物" class="slider-image">
+                <div class="slider-caption"><strong>油物</strong>鰺梅大葉巻き ヤングコーン ズッキーニ 茶先茄子</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-7.jpg" alt="変わり鉢" class="slider-image">
+                <div class="slider-caption"><strong>変わり鉢</strong>炙り鱧 香味野菜 ポン酢ジュレ</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-9.jpg" alt="食事" class="slider-image">
+                <div class="slider-caption"><strong>食事</strong>玉蜀黍と海鮮ご飯</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course5500-10.jpg" alt="水物" class="slider-image">
+                <div class="slider-caption"><strong>水物</strong>白桃ムース</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zigzag-text">
+          <div style="font-size:1.1rem; color:#333; line-height:2.2;">
+            箸附　前菜五種　向附　焼肴　焚き合わせ<br>
+            油物　変わり鉢　食事　水物　　<span style="font-family:var(--font-heading); font-size:1.6rem; font-weight:bold; color:var(--color-primary);">5,500円</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zigzag 3: Kaiseki 4500 -->
+      <div class="zigzag-row fade-in" style="margin-top: 4rem;">
+        <div class="zigzag-image">
+          <div class="auto-slider-container">
+            <div class="auto-slider-track" id="kaiseki-slider-4500">
+              <div class="slider-item">
+                <img src="images/course4500-1.jpg" alt="会席料理 4500円" class="slider-image">
+                <div class="slider-caption"><strong>会席料理</strong>4,500円</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-2.jpg" alt="箸附" class="slider-image">
+                <div class="slider-caption"><strong>箸附</strong>雲丹豆富 小メロン 花穂 美味ジュレ</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-3.jpg" alt="前菜五種" class="slider-image">
+                <div class="slider-caption"><strong>前菜五種</strong>サーモン手毬寿 夏野菜琥珀寄せ 蓮芋サワークリーム和え<br>夏鴨のオレンジ煮 夏の松葉串</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-4.jpg" alt="向附" class="slider-image">
+                <div class="slider-caption"><strong>向附</strong>鮪 平目昆布〆 湯葉 あしらい一式</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-5.jpg" alt="焼肴" class="slider-image">
+                <div class="slider-caption"><strong>焼肴</strong>豚肩ロースト香味焼 万願寺唐辛子 茗荷</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-6.jpg" alt="焚き合わせ" class="slider-image">
+                <div class="slider-caption"><strong>焚き合わせ</strong>鰻印籠煮 水玉南瓜 冬瓜人参</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-7.jpg" alt="油物" class="slider-image">
+                <div class="slider-caption"><strong>油物</strong>鰺梅大葉巻き ヤングコーン ズッキーニ 茶先茄子</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-8.jpg" alt="食事" class="slider-image">
+                <div class="slider-caption"><strong>食事</strong>玉蜀黍と海鮮ご飯</div>
+              </div>
+              <div class="slider-item">
+                <img src="images/course4500-9.jpg" alt="水物" class="slider-image">
+                <div class="slider-caption"><strong>水物</strong>白桃ムース</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="zigzag-text">
+          <div style="font-size:1.1rem; color:#333; line-height:2.2;">
+            箸附　前菜五種　向附　焼肴　焚き合わせ<br>
+            油物　食事　水物　　<span style="font-family:var(--font-heading); font-size:1.6rem; font-weight:bold; color:var(--color-primary);">4,500円</span>
+          </div>
+        </div>
+      </div>
+<!-- Zigzag 2: Banquet -->
       <div class="zigzag-row reverse" style="margin-top: 4rem;">
         <div class="zigzag-image">
           <img src="https://maruji.info/index.html/wp/wp-content/themes/hpb20S202209241510460/img/image77.jpg" alt="ご宴会プラン">
@@ -154,7 +283,7 @@
       <div class="footer-brand">
         <h2>ホテル丸治</h2>
         <p>〒320-0034<br>栃木県宇都宮市泉1-22</p>
-        <p class="footer-phone"><i class="fas fa-phone-alt"></i> 028-621-2211</p>
+        <p class="footer-phone"><i class="fas fa-phone-alt"></i> <a href="tel:028-621-2211" style="color:inherit; text-decoration:none;">028-621-2211</a></p>
       </div>
       
       <div class="footer-links">
@@ -164,7 +293,6 @@
           <li><a href="banquet.html">宴会場</a></li>
           <li><a href="food.html">お料理</a></li>
           <li><a href="bento.html">お届けお弁当</a></li>
-          <li><a href="breakfast.html">ブレックファースト</a></li>
         </ul>
       </div>
       
@@ -221,5 +349,48 @@
       }, 3000); // 3秒ごとにスクロール
     }
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    function setupSlider(trackId) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      
+      const items = Array.from(track.children);
+      if (items.length <= 1) return;
+      
+      let currentIndex = 0;
+      
+      items.forEach((item, index) => {
+        item.style.position = 'absolute';
+        item.style.top = '0';
+        item.style.left = '0';
+        item.style.width = '100%';
+        item.style.height = '100%';
+        item.style.opacity = index === 0 ? '1' : '0';
+        item.style.transition = 'opacity 1s ease-in-out';
+      });
+      
+      track.style.position = 'relative';
+      track.style.width = '100%';
+      track.style.height = '100%';
+      track.style.overflow = 'hidden';
+      
+      setInterval(() => {
+        const currentItem = items[currentIndex];
+        currentIndex = (currentIndex + 1) % items.length;
+        const nextItem = items[currentIndex];
+        
+        currentItem.style.opacity = '0';
+        nextItem.style.opacity = '1';
+      }, 3000);
+    }
+    
+    setupSlider('kaiseki-slider-6500');
+    setupSlider('kaiseki-slider-5500');
+    setupSlider('kaiseki-slider-4500');
+  });
+</script>
 </body>
+
 </html>
