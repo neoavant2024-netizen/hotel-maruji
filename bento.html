@@ -11,11 +11,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=99">
-  
+  <link rel="stylesheet" href="styles.css">
+
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
+  <script src="main.js" defer></script>
+
   <style>
     .bento-grid {
       display: grid;
@@ -77,30 +79,33 @@
     }
   </style>
 </head>
-<body>
+<body class="subpage">
 
-  <!-- Header -->
-  <header class="header scrolled" id="header" style="background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
     <div class="header-container">
       <div class="logo-area">
         <a href="index.html" class="logo-link">
-          <img src="images/logo.jpg" alt="HOTEL MARUJI UTSUNOMIYA" class="site-logo">
+          <img src="images/logo.jpg" alt="ホテル丸治" class="site-logo" width="400" height="200">
         </a>
       </div>
-      
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" style="color: var(--color-primary);">
-        <i class="fas fa-bars"></i>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
 
-      <nav class="nav-menu" id="nav-menu">
+      <nav class="nav-menu" id="nav-menu" aria-label="メインメニュー">
         <ul>
-          <li><a href="index.html" style="color: var(--color-primary);">トップページ</a></li>
-          <li><a href="banquet.html" style="color: var(--color-primary);">宴会場</a></li>
-          <li><a href="food.html" style="color: var(--color-primary);">お料理</a></li>
-          <li><a href="bento.html" class="active" style="color: var(--color-primary);">お届けお弁当</a></li>
+          <li><a href="index.html">トップページ</a></li>
+          <li><a href="banquet.html">宴会場</a></li>
+          <li><a href="food.html">お料理</a></li>
+          <li><a href="bento.html" class="active" aria-current="page">お届けお弁当</a></li>
+          <li><a href="access.html">アクセス</a></li>
         </ul>
-        <div class="header-contact" style="color: var(--color-primary);">
-          <p class="phone"><i class="fas fa-phone-alt"></i> <a href="tel:028-621-2211" style="color:inherit; text-decoration:none;">028-621-2211</a></p>
+        <div class="header-contact">
+          <p class="phone"><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:028-621-2211">028-621-2211</a></p>
           <p class="address">〒320-0034 栃木県宇都宮市泉1-22</p>
         </div>
       </nav>
@@ -122,7 +127,7 @@
   </section>
 
   <!-- Main Content -->
-  <main>
+  <main id="main">
     <section class="section fade-in">
       <div class="container">
         
@@ -223,15 +228,15 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- フッター -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
         <h2>ホテル丸治</h2>
         <p>〒320-0034<br>栃木県宇都宮市泉1-22</p>
-        <p class="footer-phone"><i class="fas fa-phone-alt"></i> <a href="tel:028-621-2211" style="color:inherit; text-decoration:none;">028-621-2211</a></p>
+        <p class="footer-phone"><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:028-621-2211">028-621-2211</a></p>
       </div>
-      
+
       <div class="footer-links">
         <h3>メニュー</h3>
         <ul>
@@ -239,15 +244,16 @@
           <li><a href="banquet.html">宴会場</a></li>
           <li><a href="food.html">お料理</a></li>
           <li><a href="bento.html">お届けお弁当</a></li>
+          <li><a href="access.html">アクセス</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-social">
         <h3>SNS公式アカウント</h3>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LINE"><i class="fab fa-line"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="LINE"><i class="fab fa-line" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -256,33 +262,5 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      menuToggle.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-    });
-
-    // Fade-in animation on scroll
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    fadeElements.forEach(element => {
-      observer.observe(element);
-    });
-  </script>
 </body>
 </html>
