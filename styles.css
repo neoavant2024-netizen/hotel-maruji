@@ -57,7 +57,17 @@ ul {
 }
 
 .alt-bg {
-  background-color: var(--color-bg-alt);
+  background-color: transparent !important;
+  background-image: linear-gradient(rgba(244, 251, 244, 0.4), rgba(244, 251, 244, 0.4)), url('images/bg_pattern.jpg') !important;
+  background-size: 300px !important;
+  background-repeat: repeat !important;
+}
+
+.page-header {
+  background-color: transparent !important;
+  background-image: linear-gradient(rgba(244, 251, 244, 0.4), rgba(244, 251, 244, 0.4)), url('images/bg_pattern.jpg') !important;
+  background-size: 300px !important;
+  background-repeat: repeat !important;
 }
 
 .section-title {
