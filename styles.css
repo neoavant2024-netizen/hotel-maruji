@@ -36,6 +36,13 @@ body {
   overflow-x: hidden;
 }
 
+body.subpage {
+  background-image: url('images/subpage_bg.jpg');
+  background-repeat: repeat;
+  background-size: 300px;
+  background-color: var(--color-bg);
+}
+
 a {
   text-decoration: none;
   color: inherit;
