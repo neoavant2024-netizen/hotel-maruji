@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   /* Colors */
   --color-primary: #1e5631; /* Deep Forest Green */
   --color-secondary: #4c9a2a; /* Leaf Green */
@@ -38,9 +38,10 @@ body {
 
 body.subpage {
   background-image: url('images/subpage_bg.jpg');
-  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-position: top center;
   background-size: 300px;
-  background-color: var(--color-bg);
+  background-color: #ffffff;
 }
 
 a {
