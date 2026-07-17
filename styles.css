@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   /* Colors */
   --color-primary: #1e5631; /* Deep Forest Green */
   --color-secondary: #4c9a2a; /* Leaf Green */
@@ -687,17 +687,22 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   .nav-menu {
     position: fixed;
     top: 70px;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: calc(100vh - 70px);
     background-color: var(--color-primary);
     flex-direction: column;
     padding: 2rem;
-    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
   }
   
   .nav-menu.active {
-    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
   
   .nav-menu ul {
@@ -891,3 +896,4 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
     font-size: 1.1rem;
   }
 }
+
