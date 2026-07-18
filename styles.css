@@ -343,7 +343,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 .info-card {
   background-color: var(--color-white);
   padding: var(--spacing-md);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border-top: 4px solid var(--color-accent);
 }
@@ -352,7 +352,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   object-fit: cover;
   display: block;
@@ -364,7 +364,12 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 .auto-slider-container {
   overflow: hidden;
   width: 100%;
-  display: grid;
+  margin: 0 auto;
+  position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  aspect-ratio: 4/3;
+  background: #f9f9f9;
 }
 
 .auto-slider-track {
@@ -375,12 +380,11 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 
 /* 表示中の 1 枚だけを不透明にし、クロスフェードで切り替える */
 .slider-item {
-  grid-area: 1 / 1;
+  position: absolute;
+  inset: 0;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   background: #fff;
-  display: flex;
-  flex-direction: column;
 }
 
 .slider-item.is-active {
@@ -389,19 +393,21 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 
 .slider-image {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: 100%;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
 }
 
 .slider-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #333;
-  background-color: #fff;
-  padding: 8px 4px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 6px;
   box-sizing: border-box;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -410,9 +416,9 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 
 .slider-caption strong {
   display: block;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--color-primary);
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .zigzag-text h3 {
@@ -468,7 +474,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 }
 
 .service-image-container {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
@@ -516,7 +522,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 .tourism-card {
   background: var(--color-white);
   padding: var(--spacing-md);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   border-left: 4px solid var(--color-secondary);
 }
@@ -733,7 +739,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 /* アクセスページ */
 .access-card {
   background-color: var(--color-white);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 2.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border-top: 4px solid var(--color-accent);
@@ -837,9 +843,8 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 }
 
 .auto-slider-container {
-  overflow: hidden;
-  width: 100%;
-  display: grid;
+  max-width: 450px !important;
+  margin: 0 !important;
 }
 
 .zigzag-image img {
@@ -911,7 +916,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   gap: 1rem;
   padding: 1.2rem;
   background-color: var(--color-white);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -958,7 +963,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   margin: 0 auto 3rem;
   background-color: var(--color-white);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
@@ -992,5 +997,4 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-
 
