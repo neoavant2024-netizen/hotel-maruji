@@ -46,10 +46,10 @@
       </div>
 
       <div class="sns-links">
-        <a href="https://www.facebook.com/profile.php?id=100054431203021" target="_blank" aria-label="Facebook"><i class="fab fa-facebook sns-fb"></i></a>
-        <a href="https://www.instagram.com/utsunomiya_maruji/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram sns-ig"></i></a>
-        <a href="https://x.com/Maruji_group" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter sns-x"></i></a>
-        <a href="https://line.me/R/ti/p/@039gcdep?ts=09161748&oat_content=url" target="_blank" aria-label="LINE"><i class="fab fa-line sns-line"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100054431203021" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook sns-fb"></i></a>
+        <a href="https://www.instagram.com/utsunomiya_maruji/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram sns-ig"></i></a>
+        <a href="https://x.com/Maruji_group" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fab fa-x-twitter sns-x"></i></a>
+        <a href="https://line.me/R/ti/p/@039gcdep?ts=09161748&oat_content=url" target="_blank" rel="noopener" aria-label="LINE"><i class="fab fa-line sns-line"></i></a>
       </div>
       <button class="menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
         <i class="fas fa-bars" aria-hidden="true"></i>
@@ -88,7 +88,7 @@
   </section>
 
   <!-- Information / News -->
-  <section id="news" class="section news-section fade-in" style="padding-top: 3rem;">
+  <section id="news" class="section news-section fade-in">
     <div class="container">
       <h2 class="section-title">新着情報<span>News</span></h2>
       <div class="news-list">
@@ -106,15 +106,15 @@
         </a>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-        <div id="flyer-summer" style="flex: 1 1 400px; max-width: 600px; scroll-margin-top: 100px;">
+      <div class="flyer-grid">
+        <div id="flyer-summer" class="flyer-item">
           <a href="news_summer/">
-            <img src="images/summer_party_new.jpg?v=2" alt="夏のパーティープラン" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="images/summer_party_new.jpg?v=2" alt="夏のパーティープラン" loading="lazy">
           </a>
         </div>
-        <div id="flyer-matsuri" style="flex: 1 1 400px; max-width: 600px; scroll-margin-top: 100px;">
+        <div id="flyer-matsuri" class="flyer-item">
           <a href="news_matsuri/">
-            <img src="images/miya_matsuri.jpg?v=2" alt="宮まつり おまつりひろば" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <img src="images/miya_matsuri.jpg?v=2" alt="宮まつり おまつりひろば" loading="lazy">
           </a>
         </div>
       </div>
@@ -131,8 +131,8 @@
           <li>
             <div>
               <i class="fas fa-bus"></i> マイクロバス送迎：送迎バス（28名様乗り）2台ございます。
-              <div style="margin-top: 10px;">
-                <img src="images/legacy_microbus.png" alt="マイクロバス送迎" style="max-width: 100%; height: auto; border-radius: 8px;">
+              <div class="info-bus-figure">
+                <img src="images/legacy_microbus.png" alt="マイクロバス送迎" loading="lazy">
               </div>
             </div>
           </li>
@@ -161,7 +161,7 @@
       </div>
     </section>
 
-    <section id="bento" class="section fade-in" style="background-image: url('images/subpage_bg.jpg'); background-size: cover; background-position: center;">
+    <section id="bento" class="section fade-in section-bg">
       <div class="container">
         <h2 class="section-title">お届けお弁当・お料理<span>Delivery Bento & Catering</span></h2>
         
@@ -189,45 +189,45 @@
           <div class="tourism-card">
             <h4><i class="fas fa-map-marker-alt"></i> 県央地域</h4>
             <ul>
-              <li><a href="#">栃木県庁</a></li>
-              <li><a href="#">宇都宮二荒山神社</a></li>
-              <li><a href="#">宇都宮餃子会</a></li>
-              <li><a href="#">道の駅うつのみや</a></li>
-              <li><a href="#">大谷資料館</a></li>
-              <li><a href="#">若竹の杜 若山農場</a></li>
-              <li><a href="#">ベルテラシェ大谷</a></li>
-              <li><a href="#">大谷寺・大谷観音</a></li>
-              <li><a href="#">道の駅たかねざわ 元気あっぷむら</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E6%A0%83%E6%9C%A8%E7%9C%8C%E5%BA%81" target="_blank" rel="noopener">栃木県庁</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E5%AE%87%E9%83%BD%E5%AE%AE%E4%BA%8C%E8%8D%92%E5%B1%B1%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener">宇都宮二荒山神社</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E5%AE%87%E9%83%BD%E5%AE%AE%E9%A4%83%E5%AD%90%E4%BC%9A" target="_blank" rel="noopener">宇都宮餃子会</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%86%E3%81%A4%E3%81%AE%E3%81%BF%E3%82%84" target="_blank" rel="noopener">道の駅うつのみや</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E8%B0%B7%E8%B3%87%E6%96%99%E9%A4%A8" target="_blank" rel="noopener">大谷資料館</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E8%8B%A5%E7%AB%B9%E3%81%AE%E6%9D%9C%20%E8%8B%A5%E5%B1%B1%E8%BE%B2%E5%A0%B4" target="_blank" rel="noopener">若竹の杜 若山農場</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%AB%E3%83%86%E3%83%A9%E3%82%B7%E3%82%A7%E5%A4%A7%E8%B0%B7" target="_blank" rel="noopener">ベルテラシェ大谷</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E8%B0%B7%E5%AF%BA%E3%83%BB%E5%A4%A7%E8%B0%B7%E8%A6%B3%E9%9F%B3" target="_blank" rel="noopener">大谷寺・大谷観音</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%9F%E3%81%8B%E3%81%AD%E3%81%96%E3%82%8F%20%E5%85%83%E6%B0%97%E3%81%82%E3%81%A3%E3%81%B7%E3%82%80%E3%82%89" target="_blank" rel="noopener">道の駅たかねざわ 元気あっぷむら</a></li>
             </ul>
           </div>
 
           <div class="tourism-card">
             <h4><i class="fas fa-mountain"></i> 県北地域【日光・那須】</h4>
             <ul>
-              <li><a href="#">日光東照宮</a></li>
-              <li><a href="#">中禅寺湖</a></li>
-              <li><a href="#">東武ワールドスクエア</a></li>
-              <li><a href="#">鬼怒川温泉</a></li>
-              <li><a href="#">華厳滝</a></li>
-              <li><a href="#">那須ロープウェイ</a></li>
-              <li><a href="#">那須ガーデンアウトレット</a></li>
-              <li><a href="#">那須どうぶつ王国</a></li>
-              <li><a href="#">塩原温泉</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%85%89%E6%9D%B1%E7%85%A7%E5%AE%AE" target="_blank" rel="noopener">日光東照宮</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E7%A6%85%E5%AF%BA%E6%B9%96" target="_blank" rel="noopener">中禅寺湖</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E6%AD%A6%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2" target="_blank" rel="noopener">東武ワールドスクエア</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%AC%BC%E6%80%92%E5%B7%9D%E6%B8%A9%E6%B3%89" target="_blank" rel="noopener">鬼怒川温泉</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E8%8F%AF%E5%8E%B3%E6%BB%9D" target="_blank" rel="noopener">華厳滝</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E9%A0%88%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4" target="_blank" rel="noopener">那須ロープウェイ</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E9%A0%88%E3%82%AC%E3%83%BC%E3%83%87%E3%83%B3%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88" target="_blank" rel="noopener">那須ガーデンアウトレット</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E9%A0%88%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4%E7%8E%8B%E5%9B%BD" target="_blank" rel="noopener">那須どうぶつ王国</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E5%A1%A9%E5%8E%9F%E6%B8%A9%E6%B3%89" target="_blank" rel="noopener">塩原温泉</a></li>
             </ul>
           </div>
 
           <div class="tourism-card">
             <h4><i class="fas fa-leaf"></i> 県南・県東地域</h4>
             <ul>
-              <li><a href="#">あしかがフラワーパーク</a></li>
-              <li><a href="#">佐野厄除け大師</a></li>
-              <li><a href="#">ココ・ファーム・ワイナリー</a></li>
-              <li><a href="#">佐野プレミアムアウトレット</a></li>
-              <li><a href="#">いちごの里</a></li>
-              <li><a href="#">益子焼</a></li>
-              <li><a href="#">SLもおか</a></li>
-              <li><a href="#">ツインリンクもてぎ</a></li>
-              <li><a href="#">道の駅ましこ</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%97%E3%81%8B%E3%81%8C%E3%83%95%E3%83%A9%E3%83%AF%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF" target="_blank" rel="noopener">あしかがフラワーパーク</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E4%BD%90%E9%87%8E%E5%8E%84%E9%99%A4%E3%81%91%E5%A4%A7%E5%B8%AB" target="_blank" rel="noopener">佐野厄除け大師</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B3%E3%82%B3%E3%83%BB%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%AF%E3%82%A4%E3%83%8A%E3%83%AA%E3%83%BC" target="_blank" rel="noopener">ココ・ファーム・ワイナリー</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E4%BD%90%E9%87%8E%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AC%E3%83%83%E3%83%88" target="_blank" rel="noopener">佐野プレミアムアウトレット</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%81%A1%E3%81%94%E3%81%AE%E9%87%8C" target="_blank" rel="noopener">いちごの里</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E7%9B%8A%E5%AD%90%E7%84%BC" target="_blank" rel="noopener">益子焼</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=SL%E3%82%82%E3%81%8A%E3%81%8B" target="_blank" rel="noopener">SLもおか</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E3%83%84%E3%82%A4%E3%83%B3%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%82%E3%81%A6%E3%81%8E" target="_blank" rel="noopener">ツインリンクもてぎ</a></li>
+              <li><a href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85%E3%81%BE%E3%81%97%E3%81%93" target="_blank" rel="noopener">道の駅ましこ</a></li>
             </ul>
           </div>
 
@@ -259,9 +259,9 @@
       <div class="footer-social">
         <h3>SNS公式アカウント</h3>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="#" aria-label="LINE"><i class="fab fa-line" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100054431203021" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/utsunomiya_maruji/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://line.me/R/ti/p/@039gcdep?ts=09161748&oat_content=url" target="_blank" rel="noopener" aria-label="LINE"><i class="fab fa-line" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

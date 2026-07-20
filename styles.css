@@ -999,3 +999,12 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 }
 
 
+/* --- トップページ 新着情報・チラシ --- */
+.news-section { padding-top: 3rem; }
+.flyer-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem; }
+.flyer-item { flex: 1 1 400px; max-width: 600px; scroll-margin-top: 100px; }
+.flyer-item img { width: 100%; height: auto; display: block; border-radius: var(--border-radius); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.info-bus-figure { margin-top: 10px; }
+.info-bus-figure img { max-width: 100%; height: auto; border-radius: var(--border-radius); }
+.section-bg { background-image: url('images/subpage_bg.jpg'); background-size: cover; background-position: center; }
+
