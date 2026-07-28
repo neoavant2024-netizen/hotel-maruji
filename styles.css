@@ -1095,3 +1095,29 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   .sns-links { display: none; }
 }
 
+
+/* --- ヒーローCTA --- */
+.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+.btn-lg { padding: 1rem 2rem; font-size: 1.1rem; }
+.btn-outline { background-color: transparent; color: var(--color-white); border: 2px solid var(--color-white); }
+.btn-outline:hover { background-color: var(--color-white); color: var(--color-primary); }
+/* --- 宴会の強み訴求 --- */
+.strengths { background-color: var(--color-bg-alt); padding: 3rem 0; }
+.strengths-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center; }
+.strength-item { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 1rem 0.5rem; }
+.strength-item i { font-size: 2rem; color: var(--color-secondary); margin-bottom: 0.5rem; }
+.strength-num { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-primary); }
+.strength-label { font-size: 0.85rem; color: var(--color-text-light); }
+/* --- 電話CTAバナー --- */
+.cta-banner { background-color: var(--color-primary); color: var(--color-white); text-align: center; padding: 3.5rem 1rem; }
+.cta-banner h2 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.8rem; color: var(--color-white); }
+.cta-banner p { margin-bottom: 1.5rem; }
+.cta-banner .cta-tel { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; display: inline-block; margin-bottom: 1.2rem; }
+.cta-banner .cta-tel a { color: var(--color-white); }
+.cta-banner .btn { background-color: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); }
+.cta-banner .btn:hover { background-color: transparent; border-color: var(--color-white); }
+@media (max-width: 768px) {
+  .strengths-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-banner .cta-tel { font-size: 1.8rem; }
+}
+
