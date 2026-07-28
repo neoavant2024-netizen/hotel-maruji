@@ -215,12 +215,12 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.4rem;
 }
 
 .nav-menu ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 .nav-menu ul li a {
@@ -228,6 +228,7 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   font-weight: 500;
   font-size: 1rem;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-menu ul li a::after {
@@ -1067,3 +1068,30 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 .news-page-date { color: var(--color-text-light); }
 .news-flyer-img { width: 100%; height: auto; max-width: 600px; display: block; margin: 0 auto; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
 .news-page-foot { text-align: center; margin-top: 3rem; }
+
+/* --- お問い合わせフォーム --- */
+.contact-form .form-group { margin-bottom: 1.5rem; }
+.contact-form label,
+.contact-form legend { display: block; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem; }
+.contact-form .req { display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.5rem; font-size: 0.75rem; background: var(--color-secondary); color: #fff; border-radius: 4px; vertical-align: middle; }
+.contact-form .opt { display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.5rem; font-size: 0.75rem; background: #999; color: #fff; border-radius: 4px; vertical-align: middle; }
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea { width: 100%; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: var(--border-radius); font-family: inherit; font-size: 1rem; background: #fff; color: var(--color-text); }
+.contact-form input:focus,
+.contact-form textarea:focus { outline: none; border-color: var(--color-secondary); box-shadow: 0 0 0 3px rgba(76, 154, 42, 0.15); }
+.contact-form fieldset { border: none; padding: 0; margin: 0; }
+.contact-form .radio-item { display: flex; align-items: center; gap: 0.5rem; font-weight: normal; color: var(--color-text); margin-bottom: 0.6rem; cursor: pointer; }
+.contact-form .radio-item input { width: auto; margin: 0; accent-color: var(--color-secondary); }
+.contact-form .form-submit { text-align: center; margin-top: 2rem; }
+.contact-form .form-submit .btn { cursor: pointer; border: none; font-size: 1.05rem; padding: 0.9rem 2.5rem; }
+.contact-note { text-align: center; margin-top: 2rem; color: var(--color-text-light); font-size: 0.95rem; line-height: 1.9; }
+.contact-note .tel-large { font-size: 1.3rem; font-weight: 700; color: var(--color-primary); }
+
+
+/* 中間幅ではヘッダーのSNSを隠してナビ・連絡先にゆとりを持たせる（SNSはフッターにあり） */
+@media (max-width: 1100px) {
+  .sns-links { display: none; }
+}
+
