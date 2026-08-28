@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   /* Colors */
   --color-primary: #1e5631; /* Deep Forest Green */
   --color-secondary: #4c9a2a; /* Leaf Green */
@@ -386,6 +386,8 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   opacity: 0;
   transition: opacity 1s ease-in-out;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider-item.is-active {
@@ -394,21 +396,19 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 
 .slider-image {
   width: 100%;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
 }
 
 .slider-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   text-align: center;
   font-size: 0.85rem;
   color: #333;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 6px;
+  background-color: #f9f9f9;
+  padding: 8px 6px;
   box-sizing: border-box;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -1150,3 +1150,19 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   .usecase-grid { grid-template-columns: 1fr; }
 }
 
+/* Banquet Slider */
+.banquet-slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1024 / 262;
+  background: #f9f9f9;
+  margin-bottom: 1rem;
+}
+.banquet-slider-container .slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
