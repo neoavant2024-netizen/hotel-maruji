@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://maruji.info/</loc></url>
-  <url><loc>https://maruji.info/banquet.html</loc></url>
-  <url><loc>https://maruji.info/food.html</loc></url>
-  <url><loc>https://maruji.info/food_august.html</loc></url>
-  <url><loc>https://maruji.info/bento.html</loc></url>
-  <url><loc>https://maruji.info/access.html</loc></url>
-  <url><loc>https://maruji.info/contact.html</loc></url>
-  <url><loc>https://maruji.info/news_matsuri/</loc></url>
-  <url><loc>https://maruji.info/news_summer/</loc></url>
+  <url><loc>https://maruji.info/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://maruji.info/banquet.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://maruji.info/food.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/food_september.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://maruji.info/food_august.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://maruji.info/bento.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/contact.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/access.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://maruji.info/news_osechi/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://maruji.info/news_sake/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://maruji.info/news_matsuri/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://maruji.info/news_summer/</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 </urlset>
