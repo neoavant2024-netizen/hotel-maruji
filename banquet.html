@@ -35,10 +35,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://maruji.info/" },
+      { "@type": "ListItem", "position": 2, "name": "宴会場", "item": "https://maruji.info/banquet.html" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "ホテル丸治では何名まで宴会できますか？", "acceptedAnswer": { "@type": "Answer", "text": "最大180名様までご利用いただけます。7階「松竹梅」は正餐130名・立食150名、少人数の個室宴会にも対応しています。" } },
+      { "@type": "Question", "name": "送迎バスはありますか？", "acceptedAnswer": { "@type": "Answer", "text": "28名乗りのマイクロバスを2台ご用意しています。10名様以上のご宴会で送迎を承ります（要予約）。" } },
+      { "@type": "Question", "name": "法要や会食もお願いできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。完全個室のお部屋で、ご法要やご会食を落ち着いた雰囲気で承ります。" } },
+      { "@type": "Question", "name": "忘年会・新年会・歓送迎会のプランはありますか？", "acceptedAnswer": { "@type": "Answer", "text": "大皿料理・会席料理はお1人様5,000円～、立食プランは8,000円～。飲み放題もご用意しています。ご予算に応じてご相談ください。" } },
+      { "@type": "Question", "name": "会議や研修で利用できますか？", "acceptedAnswer": { "@type": "Answer", "text": "シアター・スクール・コの字・ロの字など各レイアウトに対応。BGM音響・高速Wi-Fiも完備しています。" } },
+      { "@type": "Question", "name": "アクセスと駐車場について教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "東武宇都宮駅から徒歩圏内の宇都宮市泉町にございます。詳しいアクセス・駐車場はアクセスページをご覧ください。" } }
+    ]
+  }
+]
+  </script>
 
   <script src="main.js" defer></script>
 </head>
@@ -86,14 +111,24 @@
   <section class="page-header">
     <div class="container">
       <h1 class="section-title">宴会場<span>Banquet & Conference Rooms</span></h1>
-      <p class="page-header-lead">大小さまざまな宴会場・会議室をご用意しております。</p>
+      <p class="page-header-lead">宇都宮で宴会場をお探しなら、東武宇都宮駅前のホテル丸治へ。忘年会・新年会・歓送迎会・同窓会から、法要・会食、会議・研修まで、少人数から最大180名様の大型宴会に対応。マイクロバス送迎（28名乗り2台）も承ります。</p>
     </div>
   </section>
 
   <!-- Main Content -->
+  <nav class="breadcrumb container" aria-label="パンくずリスト">
+    <ol>
+      <li><a href="/">ホーム</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">/</li>
+      <li aria-current="page">宴会場</li>
+    </ol>
+  </nav>
+
   <main id="main">
     <section class="section fade-in">
       <div class="container">
+
+        <h2 class="section-title">宇都宮最大級 最大180名の宴会場・会議室<span>Banquet Rooms</span></h2>
 
         <!-- 松竹梅 -->
         <div class="room-block">
@@ -213,7 +248,47 @@
       </div>
     </section>
 
+    <!-- ご利用シーン別 -->
+    <section class="section fade-in">
+      <div class="container">
+        <h2 class="section-title">ご利用シーン別のご案内<span>Occasions</span></h2>
+        <p class="usecase-note">宇都宮での様々なご宴会・お集まりに、経験豊富なスタッフが対応いたします。ご予算・人数・ご用途に合わせて最適なプランをご提案します。</p>
+        <div class="usecase-grid">
+          <div class="usecase-card"><i class="fas fa-glass-cheers" aria-hidden="true"></i><h3>忘年会・新年会</h3><p>年末年始の大人数のご宴会に。大皿・会席料理と飲み放題で、宇都宮駅前の好立地。送迎バスもご利用いただけます。</p></div>
+          <div class="usecase-card"><i class="fas fa-user-friends" aria-hidden="true"></i><h3>歓送迎会</h3><p>春の歓送迎会に。少人数のお部屋から最大180名の大型宴会場まで、人数に合わせて柔軟に対応します。</p></div>
+          <div class="usecase-card"><i class="fas fa-spa" aria-hidden="true"></i><h3>法要・会食</h3><p>完全個室のお部屋で、ご法要やご会食を落ち着いた雰囲気で。仕出し・お料理もご用意いたします。</p></div>
+          <div class="usecase-card"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i><h3>会議・研修・セミナー</h3><p>シアター・スクール・コの字など各レイアウトに対応。BGM音響・高速Wi-Fi完備で、宇都宮でのビジネス利用に。</p></div>
+          <div class="usecase-card"><i class="fas fa-users" aria-hidden="true"></i><h3>同窓会・記念行事</h3><p>懐かしい仲間との再会や記念のお集まりに。思い出に残るひとときを、真心のおもてなしでお手伝いします。</p></div>
+          <div class="usecase-card"><i class="fas fa-birthday-cake" aria-hidden="true"></i><h3>各種パーティー</h3><p>立食パーティーやお祝いの席に。和洋中折衷の立食プラン（30名様～）もご用意しています。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section fade-in section-bg">
+      <div class="container">
+        <h2 class="section-title">よくあるご質問<span>FAQ</span></h2>
+        <div class="faq-list">
+          <details class="faq-item"><summary><span class="faq-q">Q</span>ホテル丸治では何名まで宴会できますか？<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></summary><div class="faq-a-inner">最大180名様までご利用いただけます。7階「松竹梅」は正餐130名・立食150名、少人数の個室宴会にも対応しています。</div></details>
+          <details class="faq-item"><summary><span class="faq-q">Q</span>送迎バスはありますか？<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></summary><div class="faq-a-inner">28名乗りのマイクロバスを2台ご用意しています。10名様以上のご宴会で送迎を承ります（要予約）。</div></details>
+          <details class="faq-item"><summary><span class="faq-q">Q</span>法要や会食もお願いできますか？<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></summary><div class="faq-a-inner">はい。完全個室のお部屋で、ご法要やご会食を落ち着いた雰囲気で承ります。</div></details>
+          <details class="faq-item"><summary><span class="faq-q">Q</span>忘年会・新年会・歓送迎会のプランはありますか？<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></summary><div class="faq-a-inner">大皿料理・会席料理はお1人様5,000円～、立食プランは8,000円～。飲み放題もご用意しています。ご予算に応じてご相談ください。</div></details>
+          <details class="faq-item"><summary><span class="faq-q">Q</span>会議や研修で利用できますか？<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></summary><div class="faq-a-inner">シアター・スクール・コの字・ロの字など各レイアウトに対応。BGM音響・高速Wi-Fiも完備しています。</div></details>
+          <details class="faq-item"><summary><span class="faq-q">Q</span>アクセスと駐車場について教えてください。<i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i></summary><div class="faq-a-inner">東武宇都宮駅から徒歩圏内の宇都宮市泉町にございます。詳しいアクセス・駐車場は<a href="access.html">アクセスページ</a>をご覧ください。</div></details>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- 電話CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>ご宴会のご相談・ご予約はお気軽に</h2>
+      <p>宇都宮での宴会・会議・完全個室でのご法要のご予約・お見積り・空室確認を承っております。</p>
+      <div class="cta-tel"><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:028-621-2211">028-621-2211</a></div>
+      <div><a href="contact.html" class="btn btn-lg">お問い合わせ・ご予約はこちら</a></div>
+    </div>
+  </section>
 
   <!-- フッター -->
   <footer class="footer">
