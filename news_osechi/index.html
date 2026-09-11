@@ -86,34 +86,108 @@
         </div>
 
         <style>
-          .osechi-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+          .flip-book-container {
+            position: relative;
             width: 100%;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
-          .osechi-grid img {
+          .flip-book {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 0 auto;
+          }
+          .page {
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #ccc;
+          }
+          .page img {
             width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 0 !important;
+            height: 100%;
+            object-fit: contain;
           }
-          @media (max-width: 768px) {
-            .osechi-grid {
-              grid-template-columns: 1fr;
-            }
+          .flip-controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+          }
+          .flip-btn {
+            background: #8c7348;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+          }
+          .flip-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+          }
+          .page-counter {
+            font-weight: bold;
           }
         </style>
-        <div class="flyer-container" style="display: flex; flex-direction: column; gap: 40px; align-items: center;">
-          <a href="/images/news_osechi_2027.jpg" target="_blank" rel="noopener" title="クリックして拡大"><img src="/images/news_osechi_2027.jpg" alt="2027年 おせち料理 表紙" class="news-flyer-img" style="margin-bottom:0;"></a>
+        
+        <div class="flip-book-container">
+          <div id="osechi-book">
+            <div class="page"><img src="/images/news_osechi_2027.jpg" alt="1ページ"></div>
+            <div class="page"><img src="/images/news_osechi_2027_summary.jpg" alt="2ページ"></div>
+            <div class="page"><img src="/images/news_osechi_2027_fuku.jpg" alt="3ページ"></div>
+            <div class="page"><img src="/images/news_osechi_2027_midori.jpg" alt="4ページ"></div>
+            <div class="page"><img src="/images/news_osechi_2027_kotobuki.jpg" alt="5ページ"></div>
+          </div>
           
-          <div class="osechi-grid">
-            <a href="/images/news_osechi_2027_summary.jpg" target="_blank" rel="noopener" title="クリックして拡大"><img src="/images/news_osechi_2027_summary.jpg" alt="おせち料理 全種類" class="news-flyer-img"></a>
-            <a href="/images/news_osechi_2027_fuku.jpg" target="_blank" rel="noopener" title="クリックして拡大"><img src="/images/news_osechi_2027_fuku.jpg" alt="おせち料理 福 55000円" class="news-flyer-img"></a>
-            <a href="/images/news_osechi_2027_midori.jpg" target="_blank" rel="noopener" title="クリックして拡大"><img src="/images/news_osechi_2027_midori.jpg" alt="おせち料理 緑 35000円" class="news-flyer-img"></a>
-            <a href="/images/news_osechi_2027_kotobuki.jpg" target="_blank" rel="noopener" title="クリックして拡大"><img src="/images/news_osechi_2027_kotobuki.jpg" alt="おせち料理 寿 25000円" class="news-flyer-img"></a>
+          <div class="flip-controls">
+            <button id="btn-prev" class="flip-btn"><i class="fas fa-chevron-left"></i> 前へ</button>
+            <span class="page-counter"><span id="page-current">1</span> / <span id="page-total">5</span></span>
+            <button id="btn-next" class="flip-btn">次へ <i class="fas fa-chevron-right"></i></button>
           </div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const pageFlip = new St.PageFlip(document.getElementById('osechi-book'), {
+                width: 400,
+                height: 565,
+                size: 'stretch',
+                minWidth: 300,
+                maxWidth: 600,
+                minHeight: 424,
+                maxHeight: 847,
+                maxShadowOpacity: 0.5,
+                showCover: true,
+                mobileScrollSupport: false
+            });
+            
+            pageFlip.loadFromHTML(document.querySelectorAll('.page'));
+
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+            const pageCurrent = document.getElementById('page-current');
+            
+            btnPrev.addEventListener('click', () => {
+                pageFlip.flipPrev();
+            });
+            
+            btnNext.addEventListener('click', () => {
+                pageFlip.flipNext();
+            });
+            
+            pageFlip.on('flip', (e) => {
+                pageCurrent.textContent = e.data + 1;
+            });
+          });
+        </script>
         
         <div class="news-page-foot" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
           <a href="/pdf/osechi_2027_fax.pdf" target="_blank" rel="noopener" class="btn" style="background-color: #8c7348; border-color: #8c7348;"><i class="fas fa-download"></i> FAXお申込み書をダウンロード (PDF)</a>
