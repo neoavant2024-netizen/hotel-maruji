@@ -138,20 +138,21 @@
           }
         </style>
         
+        <p style="text-align:center; color:#d32f2f; font-weight:bold; margin-bottom: 20px;"><i class="fas fa-search-plus"></i> 画像をクリック（タップ）すると大きく拡大して細かい文字まで読むことができます。</p>
         <div class="flip-book-container">
           <div id="osechi-book">
-            <div class="page"><img src="/images/news_osechi_2027.jpg" alt="1ページ"></div>
-            <div class="page"><img src="/images/news_osechi_2027_summary.jpg" alt="2ページ"></div>
-            <div class="page"><img src="/images/news_osechi_2027_fuku.jpg" alt="3ページ"></div>
-            <div class="page"><img src="/images/news_osechi_2027_midori.jpg" alt="4ページ"></div>
-            <div class="page"><img src="/images/news_osechi_2027_kotobuki.jpg" alt="5ページ"></div>
+            <div class="page"><a href="/images/news_osechi_2027.jpg" data-fancybox="gallery" style="display:block; width:100%; height:100%; cursor: zoom-in;" title="クリックして拡大"><img src="/images/news_osechi_2027.jpg" alt="1ページ" style="pointer-events: none;"></a></div>
+            <div class="page"><a href="/images/news_osechi_2027_summary.jpg" data-fancybox="gallery" style="display:block; width:100%; height:100%; cursor: zoom-in;" title="クリックして拡大"><img src="/images/news_osechi_2027_summary.jpg" alt="2ページ" style="pointer-events: none;"></a></div>
+            <div class="page"><a href="/images/news_osechi_2027_fuku.jpg" data-fancybox="gallery" style="display:block; width:100%; height:100%; cursor: zoom-in;" title="クリックして拡大"><img src="/images/news_osechi_2027_fuku.jpg" alt="3ページ" style="pointer-events: none;"></a></div>
+            <div class="page"><a href="/images/news_osechi_2027_midori.jpg" data-fancybox="gallery" style="display:block; width:100%; height:100%; cursor: zoom-in;" title="クリックして拡大"><img src="/images/news_osechi_2027_midori.jpg" alt="4ページ" style="pointer-events: none;"></a></div>
+            <div class="page"><a href="/images/news_osechi_2027_kotobuki.jpg" data-fancybox="gallery" style="display:block; width:100%; height:100%; cursor: zoom-in;" title="クリックして拡大"><img src="/images/news_osechi_2027_kotobuki.jpg" alt="5ページ" style="pointer-events: none;"></a></div>
           </div>
           
           <div class="flip-controls">
             <button id="btn-prev" class="flip-btn"><i class="fas fa-chevron-left"></i> 前へ</button>
             <span class="page-counter"><span id="page-current">1</span> / <span id="page-total">5</span></span>
             <button id="btn-next" class="flip-btn">次へ <i class="fas fa-chevron-right"></i></button>
-            <button id="btn-zoom" class="flip-btn" style="margin-left: 10px; background-color: #333;"><i class="fas fa-search-plus"></i> 拡大</button>
+            
           </div>
         </div>
 
@@ -187,17 +188,7 @@
             });
             
             
-            const images = [
-              "/images/news_osechi_2027.jpg",
-              "/images/news_osechi_2027_summary.jpg",
-              "/images/news_osechi_2027_fuku.jpg",
-              "/images/news_osechi_2027_midori.jpg",
-              "/images/news_osechi_2027_kotobuki.jpg"
-            ];
-            document.getElementById('btn-zoom').addEventListener('click', () => {
-                const idx = pageFlip.getCurrentPageIndex();
-                Fancybox.show([{ src: images[idx], type: "image" }]);
-            });
+            
 
             pageFlip.on('flip', (e) => {
                 pageCurrent.textContent = e.data + 1;
