@@ -98,61 +98,29 @@
   
   <style>
     .plan-buttons-grid {
-       display: grid;
-       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-       gap: 25px;
-       margin-bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 50px;
     }
     .plan-buttons-grid a.btn-plan {
        display: flex;
        align-items: center;
        justify-content: center;
-       background-color: #8c7348;
-       color: #fff;
-       border-radius: 8px;
+       background-color: transparent;
+       color: #333;
+       border: 1px solid #8c7348;
+       border-radius: 2px;
        text-decoration: none;
-       padding: 30px 20px;
-       font-size: 1.3rem;
-       font-weight: bold;
-       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-       transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+       padding: 15px 30px;
+       font-size: 1rem;
+       transition: all 0.3s;
+       min-width: 180px;
     }
     .plan-buttons-grid a.btn-plan:hover {
-       transform: translateY(-3px);
-       box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-       background-color: #7a643d;
-    }
-  
-    html {
-      scroll-behavior: smooth;
-    }
-    .plan-section {
-      padding-top: 50px;
-      margin-top: 60px;
-      border-top: 2px dashed #ddd;
-      scroll-margin-top: 100px;
-    }
-    .plan-section h2 {
-      text-align: center;
-      color: #8c7348;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-    }
-    .plan-image-wrapper {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .plan-image-wrapper img {
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-      border-radius: 8px;
-      transition: transform 0.2s;
-      cursor: zoom-in;
-    }
-    .plan-image-wrapper img:hover {
-      transform: scale(1.02);
+       background-color: #8c7348;
+       color: #fff;
     }
   </style>
   
