@@ -41,6 +41,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 <body class="subpage">
 
@@ -129,13 +130,14 @@
   
   <section class="section fade-in">
     <div class="container" style="max-width: 900px;">
+      <p style="text-align: center; color: #d32f2f; margin-bottom: 20px; font-weight: bold;"><i class="fas fa-info-circle"></i> 各プランのボタンをクリックすると詳細（チラシ）が拡大表示されます。</p>
       <div class="plan-buttons-grid">
-        <a href="#" class="btn-plan">忘年会　会席</a>
-        <a href="#" class="btn-plan">忘年会　大皿</a>
-        <a href="#" class="btn-plan">新年会　会席</a>
-        <a href="#" class="btn-plan">新年会　大皿</a>
-        <a href="#" class="btn-plan">卒園パーティ</a>
-        <a href="#" class="btn-plan">卒団式プラン</a>
+        <a href="/images/plan_bounen_kaiseki.jpg" data-fancybox="gallery" class="btn-plan">忘年会　会席</a>
+        <a href="/images/plan_bounen_ozara.jpg" data-fancybox="gallery" class="btn-plan">忘年会　大皿</a>
+        <a href="/images/plan_shinnen_kaiseki.jpg" data-fancybox="gallery" class="btn-plan">新年会　会席</a>
+        <a href="/images/plan_shinnen_ozara.jpg" data-fancybox="gallery" class="btn-plan">新年会　大皿</a>
+        <a href="/images/plan_sotsuen.jpg" data-fancybox="gallery" class="btn-plan">卒園パーティ</a>
+        <a href="/images/plan_sotsudan.jpg" data-fancybox="gallery" class="btn-plan">卒団式プラン</a>
       </div>
     </div>
   </section>
@@ -179,6 +181,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>Fancybox.bind("[data-fancybox]", {});</script>
 </body>
 </html>
 
