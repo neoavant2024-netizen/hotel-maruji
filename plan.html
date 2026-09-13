@@ -122,19 +122,118 @@
        box-shadow: 0 8px 15px rgba(0,0,0,0.15);
        background-color: #7a643d;
     }
+  
+    html {
+      scroll-behavior: smooth;
+    }
+    .plan-section {
+      padding-top: 50px;
+      margin-top: 60px;
+      border-top: 2px dashed #ddd;
+      scroll-margin-top: 100px;
+    }
+    .plan-section h2 {
+      text-align: center;
+      color: #8c7348;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+    .plan-image-wrapper {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .plan-image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      transition: transform 0.2s;
+      cursor: zoom-in;
+    }
+    .plan-image-wrapper img:hover {
+      transform: scale(1.02);
+    }
   </style>
   
   <section class="section fade-in">
     <div class="container" style="max-width: 900px;">
-      <p style="text-align: center; color: #d32f2f; margin-bottom: 20px; font-weight: bold;"><i class="fas fa-info-circle"></i> 各プランのボタンをクリックすると詳細（チラシ）が拡大表示されます。</p>
+      <p style="text-align: center; color: #d32f2f; margin-bottom: 30px; font-weight: bold;"><i class="fas fa-hand-pointer"></i> 見たいプランのボタンをクリックすると、そのプランの詳細まで自動でスクロールします。</p>
       <div class="plan-buttons-grid">
-        <a href="/images/plan_bounen_kaiseki.jpg" data-fancybox="gallery" class="btn-plan">忘年会　会席</a>
-        <a href="/images/plan_bounen_ozara.jpg" data-fancybox="gallery" class="btn-plan">忘年会　大皿</a>
-        <a href="/images/plan_shinnen_kaiseki.jpg" data-fancybox="gallery" class="btn-plan">新年会　会席</a>
-        <a href="/images/plan_shinnen_ozara.jpg" data-fancybox="gallery" class="btn-plan">新年会　大皿</a>
-        <a href="/images/plan_sotsuen.jpg" data-fancybox="gallery" class="btn-plan">卒園パーティ</a>
-        <a href="/images/plan_sotsudan.jpg" data-fancybox="gallery" class="btn-plan">卒団式プラン</a>
+        <a href="#bounen-kaiseki" class="btn-plan">忘年会　会席</a>
+        <a href="#bounen-ozara" class="btn-plan">忘年会　大皿</a>
+        <a href="#shinnen-kaiseki" class="btn-plan">新年会　会席</a>
+        <a href="#shinnen-ozara" class="btn-plan">新年会　大皿</a>
+        <a href="#sotsuen" class="btn-plan">卒園パーティ</a>
+        <a href="#sotsudan" class="btn-plan">卒団式プラン</a>
       </div>
+
+    <!-- 忘年会 会席 -->
+    <div id="bounen-kaiseki" class="plan-section fade-in">
+      <h2>忘年会　会席</h2>
+      <div class="plan-image-wrapper">
+        <a href="/images/plan_bounen_kaiseki.jpg" data-fancybox="gallery" title="クリックして拡大">
+          <img src="/images/plan_bounen_kaiseki.jpg" alt="忘年会 会席">
+        </a>
+        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
+      </div>
+    </div>
+
+    <!-- 忘年会 大皿 -->
+    <div id="bounen-ozara" class="plan-section fade-in">
+      <h2>忘年会　大皿</h2>
+      <div class="plan-image-wrapper">
+        <a href="/images/plan_bounen_ozara.jpg" data-fancybox="gallery" title="クリックして拡大">
+          <img src="/images/plan_bounen_ozara.jpg" alt="忘年会 大皿">
+        </a>
+        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
+      </div>
+    </div>
+
+    <!-- 新年会 会席 -->
+    <div id="shinnen-kaiseki" class="plan-section fade-in">
+      <h2>新年会　会席</h2>
+      <div class="plan-image-wrapper">
+        <a href="/images/plan_shinnen_kaiseki.jpg" data-fancybox="gallery" title="クリックして拡大">
+          <img src="/images/plan_shinnen_kaiseki.jpg" alt="新年会 会席">
+        </a>
+        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
+      </div>
+    </div>
+
+    <!-- 新年会 大皿 -->
+    <div id="shinnen-ozara" class="plan-section fade-in">
+      <h2>新年会　大皿</h2>
+      <div class="plan-image-wrapper">
+        <a href="/images/plan_shinnen_ozara.jpg" data-fancybox="gallery" title="クリックして拡大">
+          <img src="/images/plan_shinnen_ozara.jpg" alt="新年会 大皿">
+        </a>
+        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
+      </div>
+    </div>
+
+    <!-- 卒園パーティ -->
+    <div id="sotsuen" class="plan-section fade-in">
+      <h2>卒園パーティ</h2>
+      <div class="plan-image-wrapper">
+        <a href="/images/plan_sotsuen.jpg" data-fancybox="gallery" title="クリックして拡大">
+          <img src="/images/plan_sotsuen.jpg" alt="卒園パーティ">
+        </a>
+        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
+      </div>
+    </div>
+
+    <!-- 卒団式プラン -->
+    <div id="sotsudan" class="plan-section fade-in">
+      <h2>卒団式プラン</h2>
+      <div class="plan-image-wrapper">
+        <a href="/images/plan_sotsudan.jpg" data-fancybox="gallery" title="クリックして拡大">
+          <img src="/images/plan_sotsudan.jpg" alt="卒団式プラン">
+        </a>
+        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
+      </div>
+    </div>
+
     </div>
   </section>
 </main>
