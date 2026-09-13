@@ -150,7 +150,7 @@
           }
         </style>
         
-        <p style="text-align:center; color:#d32f2f; font-weight:bold; margin-bottom: 20px;"><i class="fas fa-search"></i> 本のすぐ下にある虫眼鏡ボタンで拡大・縮小ができます。</p>
+        <p style="text-align:center; color:#d32f2f; font-weight:bold; margin-bottom: 20px;"><i class="fas fa-search"></i> 本のすぐ下にあるスライダーを左右に動かすとなめらかに拡大・縮小ができます。</p>
         <div class="flip-book-container">
           <div class="zoom-wrapper" id="zoom-wrapper">
             <div id="osechi-book" style="width: 100%; transition: width 0.3s ease;">
@@ -163,9 +163,10 @@
           </div>
           
           <div class="flip-controls">
-            <button id="btn-zoom-out" class="flip-btn" title="縮小"><i class="fas fa-search-minus"></i></button>
-            <button id="btn-zoom-in" class="flip-btn" title="拡大"><i class="fas fa-search-plus"></i></button>
-            <span style="margin: 0 10px; color:#aaa;">|</span>
+            <span style="font-size: 0.9rem; margin-right: 10px;">縮小</span>
+            <input type="range" id="zoom-slider" min="100" max="250" value="100" style="width: 150px; cursor: pointer;">
+            <span style="font-size: 0.9rem; margin-left: 10px; margin-right: 20px;">拡大</span>
+            <span style="color:#aaa; margin-right: 20px;">|</span>
             <button id="btn-prev" class="flip-btn"><i class="fas fa-chevron-left"></i> 前へ</button>
             <span class="page-counter"><span id="page-current">1</span> / <span id="page-total">5</span></span>
             <button id="btn-next" class="flip-btn">次へ <i class="fas fa-chevron-right"></i></button>
@@ -211,15 +212,32 @@
             });
             
             // Zoom logic
-            let currentZoomWidth = 100; // percent
             const bookEl = document.getElementById('osechi-book');
-            const btnZoomIn = document.getElementById('btn-zoom-in');
-            const btnZoomOut = document.getElementById('btn-zoom-out');
+            const slider = document.getElementById('zoom-slider');
             
-            btnZoomIn.addEventListener('click', () => {
-                currentZoomWidth += 40;
-                bookEl.style.width = currentZoomWidth + '%';
-                bookEl.style.minWidth = currentZoomWidth + '%';
+            // Remove CSS transition for width since slider provides high-frequency updates
+            bookEl.style.transition = 'transform 0.1s linear';
+            bookEl.style.transformOrigin = 'top left';
+            
+            // We need a wrapper to push the scrollbars
+            // But wait, osechi-book is inside zoom-wrapper directly.
+            // Let's use the zoom CSS property for simplicity, it works great in Chrome/Safari/Edge and natively expands parent
+            slider.addEventListener('input', (e) => {
+                const val = e.target.value / 100;
+                
+                // To make scrollbars work with transform: scale, we increase the min-width/min-height of bookEl
+                // Wait, scale doesn't affect layout. Instead, let's just use width/minWidth without transition.
+                bookEl.style.width = e.target.value + '%';
+                bookEl.style.minWidth = e.target.value + '%';
+                
+                // For ultimate smoothness during drag, don't update pageFlip (shadows might look slightly stretched but it's fast)
+            });
+            
+            slider.addEventListener('change', () => {
+                pageFlip.update();
+            });
+            
+            slider.addEventListener('change', () => {
                 pageFlip.update();
             });
             
