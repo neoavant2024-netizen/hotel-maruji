@@ -111,7 +111,7 @@
           #osechi-book {
             width: 100%;
             transition: width 0.3s ease, min-width 0.3s ease;
-            cursor: none; /* Hide default cursor to show custom tooltip */
+            cursor: zoom-in;
           }
           .page {
             background-color: #fff;
@@ -249,33 +249,53 @@
                 cursor.style.display = 'none';
             });
 
-            bookEl.addEventListener('click', (e) => {
-                isZoomed = !isZoomed;
-                if(isZoomed) {
-                    bookEl.style.width = '200%';
-                    bookEl.style.minWidth = '200%';
-                    cursor.textContent = 'クリックで縮小';
-                    
-                    // Center the click point
+            wrapper.addEventListener('click', (e) => {
+                if(e.target.closest('.nav-arrow')) return; // Ignore arrows
+                
+                // If the user was dragging to flip, don't zoom
+                // But we don't have drag state here easily, we'll assume a simple click
+                
+                if (!isZoomed) {
                     const rect = bookEl.getBoundingClientRect();
-                    const clickX = e.clientX - rect.left;
-                    const clickY = e.clientY - rect.top;
+                    const relX = (e.clientX - rect.left) / rect.width;
+                    const relY = (e.clientY - rect.top) / rect.height;
+
+                    isZoomed = true;
+                    bookEl.style.cursor = 'zoom-out';
+                    bookEl.style.width = '220%';
+                    bookEl.style.minWidth = '220%';
+                    cursor.textContent = 'クリックで縮小';
                     
                     setTimeout(() => {
                         pageFlip.update();
-                        wrapper.scrollLeft = clickX;
-                        wrapper.scrollTop = clickY;
-                    }, 350);
-                    
+                        const newRect = bookEl.getBoundingClientRect();
+                        wrapper.scrollLeft = (relX * newRect.width) - (wrapper.clientWidth / 2);
+                        wrapper.scrollTop = (relY * newRect.height) - (wrapper.clientHeight / 2);
+                    }, 310);
                 } else {
+                    isZoomed = false;
+                    bookEl.style.cursor = 'zoom-in';
                     bookEl.style.width = '100%';
                     bookEl.style.minWidth = '100%';
                     cursor.textContent = 'クリックで拡大';
                     setTimeout(() => {
                         pageFlip.update();
-                    }, 350);
+                    }, 310);
                 }
-            });
+            }, true); // Use capture phase to beat page-flip stopping propagation
+            
+            // Allow zooming with mouse wheel as well
+            wrapper.addEventListener('wheel', (e) => {
+                if(e.ctrlKey || e.metaKey) {
+                    e.preventDefault();
+                    if(e.deltaY < 0 && !isZoomed) {
+                        wrapper.click(); // Trigger zoom in
+                    } else if(e.deltaY > 0 && isZoomed) {
+                        wrapper.click(); // Trigger zoom out
+                    }
+                }
+            }, { passive: false });
+
 
             
             
