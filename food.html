@@ -41,6 +41,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
   <script src="main.js" defer></script>
+
+  <style>
+    .detailed-menu {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .detailed-menu dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 15px;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .detailed-menu dt {
+      font-weight: bold;
+      color: #8c7348;
+      white-space: nowrap;
+    }
+    .detailed-menu dd {
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      .detailed-menu dl {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+      .detailed-menu dt {
+        margin-top: 8px;
+      }
+    }
+  </style>
 </head>
 <body class="subpage">
 
@@ -169,9 +203,23 @@
             四季折々の旬の食材を贅沢に使用した、全10品の会席コースです。<br>
             大切なご接待やご慶事など、特別な日にふさわしい華やかなお料理をご堪能いただけます。
           </p>
-          <div class="zigzag-menu">
-            箸附　前菜七種　向附　合肴　焼肴　焚き合わせ<br>
-            油物　酢の物　食事　水物　　<span class="zigzag-price">6,500円</span>
+          <div class="zigzag-menu detailed-menu">
+            <h4 style="color:#d32f2f; margin-top:0; margin-bottom:15px; font-size:1.1rem; text-align:center;">10月 神無月 おしながき</h4>
+            <dl>
+              <dt>箸附</dt><dd>秋味白和え 枸杞ノ実</dd>
+              <dt>前菜</dt><dd>カステラ真薯 薩摩芋茶巾 子持柳葉魚昆布巻<br>柿玉子 海老黄身寿司 インカのめざめの酒盗揚げ 炙りサーモン小袖寿司</dd>
+              <dt>椀物</dt><dd>萩真丈 清汁仕立 松茸 青味 香り柚子</dd>
+              <dt>向附</dt><dd>季節の御造り あしらい一式</dd>
+              <dt>焼肴</dt><dd>金目鯛味噌柚庵焼 湯波田楽<br>公孫樹丸十 蓮根煎餅 紅葉人参阿茶羅</dd>
+              <dt>煮物</dt><dd>栃木県産ゆめポーク柔煮 菊花蕪 小芋 青味 麹餡</dd>
+              <dt>油物</dt><dd>貝柱真丈 天衣揚げ 蟹 蓮根 南京 菊菜</dd>
+              <dt>強肴</dt><dd>錦秋蒸し 亀甲餡</dd>
+              <dt>食事</dt><dd>鮭と茸の炊き込みご飯</dd>
+              <dt>香の物</dt><dd>三種盛り</dd>
+              <dt>留め椀</dt><dd>赤だし汁</dd>
+              <dt>水物</dt><dd>林檎プリン 旬の果物</dd>
+            </dl>
+            <div style="text-align: right;"><span class="zigzag-price">6,500円</span></div>
           </div>
         </div>
       </div>
@@ -234,9 +282,21 @@
             季節の素材を活かした全9品の会席コースです。<br>
             ご家族のお集まりや親しい方とのご会食に、心温まるひとときを提供いたします。
           </p>
-          <div class="zigzag-menu">
-            箸附　前菜五種　向附　焼肴　焚き合わせ<br>
-            油物　酢の物　食事　水物　　<span class="zigzag-price">5,500円</span>
+          <div class="zigzag-menu detailed-menu">
+            <h4 style="color:#d32f2f; margin-top:0; margin-bottom:15px; font-size:1.1rem; text-align:center;">10月 神無月 おしながき</h4>
+            <dl>
+              <dt>箸附</dt><dd>秋味白和え</dd>
+              <dt>前菜五種</dt><dd>カステラ真薯 薩摩芋茶巾<br>子持柳葉魚昆布巻 柿玉子<br>海老黄身寿司</dd>
+              <dt>向附</dt><dd>季節の御造り あしらい一式</dd>
+              <dt>焼肴</dt><dd>金目鯛味噌柚庵焼 湯波田楽<br>公孫樹丸十 蓮根煎餅 紅葉人参阿茶羅</dd>
+              <dt>煮物</dt><dd>栃木県産ゆめポーク柔煮 菊花蕪 小芋 青味 麹餡</dd>
+              <dt>油物</dt><dd>貝柱真丈 天衣揚げ 蟹 蓮根 南京 菊菜</dd>
+              <dt>強肴</dt><dd>錦秋蒸し 亀甲餡</dd>
+              <dt>食事</dt><dd>鮭と茸の炊き込みご飯</dd>
+              <dt>留め椀</dt><dd>赤だし汁</dd>
+              <dt>水物</dt><dd>林檎プリン</dd>
+            </dl>
+            <div style="text-align: right;"><span class="zigzag-price">5,500円</span></div>
           </div>
         </div>
       </div>
@@ -291,9 +351,20 @@
             お気軽にお楽しみいただける全8品の会席コースです。<br>
             ご友人とのランチやカジュアルなご宴会にぴったりな、彩り豊かなメニューです。
           </p>
-          <div class="zigzag-menu">
-            箸附　前菜五種　向附　焼肴　焚き合わせ<br>
-            油物　食事　水物　　<span class="zigzag-price">4,500円</span>
+          <div class="zigzag-menu detailed-menu">
+            <h4 style="color:#d32f2f; margin-top:0; margin-bottom:15px; font-size:1.1rem; text-align:center;">10月 神無月 おしながき</h4>
+            <dl>
+              <dt>箸附</dt><dd>青菜と木ノ子のお浸し</dd>
+              <dt>前菜五種</dt><dd>カステラ真薯 薩摩芋茶巾<br>子持柳葉魚昆布巻 柿玉子<br>海老黄身寿司</dd>
+              <dt>向附</dt><dd>季節の御造り あしらい一式</dd>
+              <dt>焼肴</dt><dd>銀鰈西京焼き 湯波田楽<br>公孫樹丸十 蓮根煎餅 紅葉人参阿茶羅</dd>
+              <dt>煮物</dt><dd>栃木県産ゆめポーク柔煮 茄子 小芋 青味 麹餡</dd>
+              <dt>油物</dt><dd>貝柱真丈 天衣揚げ</dd>
+              <dt>食事</dt><dd>鮭と茸の炊き込みご飯</dd>
+              <dt>留め椀</dt><dd>赤だし汁</dd>
+              <dt>水物</dt><dd>林檎プリン</dd>
+            </dl>
+            <div style="text-align: right;"><span class="zigzag-price">4,500円</span></div>
           </div>
         </div>
       </div>
