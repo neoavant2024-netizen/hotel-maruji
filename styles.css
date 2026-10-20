@@ -1280,3 +1280,66 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
     padding-bottom: 14px;
   }
 }
+
+
+/* --- トップページ ヒーロー直下 宴会プランナビゲーション --- */
+.hero-plan-nav {
+  background-color: #faf7f2;
+  border-bottom: 1px solid #ebd9c8;
+  padding: 30px 20px;
+  text-align: center;
+}
+.hero-plan-nav .plan-nav-title {
+  font-family: var(--font-heading);
+  color: #8c7348;
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.hero-plan-nav .plan-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.hero-plan-nav a.btn-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #8c7348;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  min-width: 170px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+.hero-plan-nav a.btn-plan:hover {
+  background-color: #8c7348;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(140, 115, 72, 0.2);
+}
+@media (max-width: 768px) {
+  .hero-plan-nav {
+    padding: 25px 15px;
+  }
+  .hero-plan-nav .plan-buttons-grid {
+    gap: 10px;
+  }
+  .hero-plan-nav a.btn-plan {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 140px;
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+}
