@@ -1343,3 +1343,53 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
     font-size: 0.9rem;
   }
 }
+
+
+/* --- メインビジュアル内 宴会プランボタン --- */
+.hero-plan-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  max-width: 960px;
+  margin: 0 auto 2.5rem;
+  padding: 0 10px;
+}
+.hero-btn-plan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #333333;
+  border: 1.5px solid #8c7348;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  min-width: 170px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+}
+.hero-btn-plan:hover {
+  background-color: #8c7348;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 768px) {
+  .hero-plan-buttons {
+    gap: 8px;
+    margin-bottom: 1.8rem;
+    margin-top: 60px; /* ヘッダーとの被り防止 */
+  }
+  .hero-btn-plan {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 135px;
+    padding: 10px 8px;
+    font-size: 0.88rem;
+  }
+}
