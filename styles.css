@@ -1350,46 +1350,46 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  max-width: 960px;
-  margin: 0 auto 2.5rem;
-  padding: 0 10px;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto 3.5rem; /* 位置を少し上へ引き上げる（下の文字との間隔を空ける） */
+  padding-top: 20px; /* 全体的に上寄りへ配置 */
 }
 .hero-btn-plan {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: #ffffff; /* 完全な白背景 */
   color: #333333;
-  border: 1.5px solid #8c7348;
-  border-radius: 3px;
+  border: 1px solid #8c7348; /* 画像通りの細いゴールドの四角枠 */
+  border-radius: 0; /* 角丸なしのシャープな長方形（四角） */
   text-decoration: none;
-  padding: 12px 24px;
-  font-size: 1.05rem;
-  font-weight: 700;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  min-width: 170px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  min-width: 175px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* 控えめで上品な影 */
 }
 .hero-btn-plan:hover {
   background-color: #8c7348;
   color: #ffffff;
-  border-color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border-color: #8c7348;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 768px) {
   .hero-plan-buttons {
     gap: 8px;
-    margin-bottom: 1.8rem;
-    margin-top: 60px; /* ヘッダーとの被り防止 */
+    margin-bottom: 2rem;
+    padding-top: 50px; /* スマホ時のヘッダーとの間隔調整 */
   }
   .hero-btn-plan {
     flex: 1 1 calc(50% - 10px);
-    min-width: 135px;
-    padding: 10px 8px;
+    min-width: 130px;
+    padding: 12px 6px;
     font-size: 0.88rem;
+    border-radius: 0;
   }
 }
