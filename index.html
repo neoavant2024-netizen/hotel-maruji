@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=16">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -81,6 +81,61 @@
   ]
 }
   </script>
+
+  <style>
+    /* ヒーロー内 宴会プラン枠線ボタン（画像完全準拠） */
+    .hero-plan-buttons {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 16px !important;
+      max-width: 940px !important;
+      margin: 0 auto 3.5rem !important;
+      padding-top: 15px !important;
+      z-index: 10 !important;
+      position: relative !important;
+    }
+    .hero-btn-plan {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background-color: #ffffff !important;
+      color: #333333 !important;
+      border: 1px solid #8c7348 !important;
+      border-radius: 0px !important;
+      -webkit-border-radius: 0px !important;
+      text-decoration: none !important;
+      padding: 16px 32px !important;
+      font-size: 1.05rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.05em !important;
+      transition: all 0.25s ease !important;
+      min-width: 180px !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+      box-sizing: border-box !important;
+    }
+    .hero-btn-plan:hover {
+      background-color: #8c7348 !important;
+      color: #ffffff !important;
+      border-color: #8c7348 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    }
+    @media (max-width: 768px) {
+      .hero-plan-buttons {
+        gap: 8px !important;
+        margin-bottom: 2rem !important;
+        padding-top: 50px !important;
+      }
+      .hero-btn-plan {
+        flex: 1 1 calc(50% - 10px) !important;
+        min-width: 130px !important;
+        padding: 12px 6px !important;
+        font-size: 0.88rem !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
