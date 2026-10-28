@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=18">
+  <link rel="stylesheet" href="styles.css?v=19">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -601,12 +601,54 @@
          上から優先順（直近イベント→季節プラン）。start/end はその日を含み、
          end を過ぎたスライドは自動で表示されなくなる。差し替えはこの配列を編集 */
       var HERO_SLIDES = [
-        { img: 'images/hero_slide_yuzen.jpg',      href: 'news_yuzen/',      badge: '11月10日（火）開催', title: '秋の極上晩餐会「遊膳会」', sub: '創業350年の集大成 極上秋会席 全10品・お1人様15,000円', end: '2026-11-10' },
-        { img: 'images/hero_slide_distillery.jpg', href: 'news_distillery/', badge: '11月14日（土）開催', title: '蒸留所がやってくる 特別な夜', sub: '希少な蒸留酒×特製ブッフェ 8,000円・限定80名様', end: '2026-11-14' },
-        { img: 'images/hero_slide_bounenkai.jpg',  href: 'bounenkai.html',   badge: '受付中 11/16～12/30', title: '忘年会プラン', sub: '会席4,500円～／大皿4,000円～・飲み放題2,500円', end: '2026-12-30' },
-        { img: 'images/hero_slide_osechi.jpg',     href: 'news_osechi/',     badge: 'ご予約受付中', title: '2027年 おせち料理', sub: '二段重25,000円～・数量限定', end: '2026-12-28' },
-        { img: 'images/hero_slide_shinnenkai.jpg', href: 'shinnenkai.html',  badge: '1月2日スタート', title: '新年会プラン', sub: '会席4,500円～／大皿4,000円～・飲み放題2,500円', start: '2026-12-01', end: '2027-02-28' },
-        { img: 'images/hero_slide_ehomaki.jpg',    href: 'news_ehomaki/',    badge: '節分 2月2日・3日お渡し', title: '特製恵方巻', sub: '1本1,000円・数量限定', start: '2026-12-15', end: '2027-02-03' }
+        { photo: 'images/hero2_yuzen.jpg', href: 'news_yuzen/',
+          bg: 'linear-gradient(110deg, #380c12 0%, #6d1620 55%, #380c12 100%)',
+          badge: '11月10日（火）開催｜完全予約制',
+          catch: '一夜限り 350年の技の集大成',
+          title: '秋の極上晩餐会<br>「遊膳会」',
+          desc: '特選和牛ステーキ、ずわいがに・のど黒、焼松茸と帆立。料理長が厳選した産地直送の秋食材を、極上の会席全十品で味わい尽くす特別な晩餐会です。',
+          price: '特別ご会費 15,000円（税・サ込／お飲物付）',
+          end: '2026-11-10' },
+        { photo: 'images/hero2_distillery.jpg', href: 'news_distillery/',
+          bg: 'linear-gradient(110deg, #0d0d13 0%, #272231 55%, #0d0d13 100%)',
+          badge: '11月14日（土）18:00開宴｜定員80名様',
+          catch: '日本が誇る四大蒸留所が丸治に集う夜',
+          title: '蒸留所がやってくる 特別な夜',
+          desc: '奥会津「ねっか」・日光街道小山蒸溜所・高蔵・BOSO Rhum。希少な蒸留酒のペアリングを、料理長特製の着席ブッフェとともに。受付では「日光ハイボール」のウェルカムサービスも。',
+          price: 'お1人様 8,000円（税込・サ込）',
+          end: '2026-11-14' },
+        { photo: 'images/hero2_bounenkai.jpg', href: 'bounenkai.html',
+          bg: 'linear-gradient(110deg, #40101a 0%, #7a1824 55%, #40101a 100%)',
+          badge: 'ご予約受付中｜11月16日～12月30日',
+          catch: '今年の締めくくりは 駅前のホテルで',
+          title: '忘年会プラン',
+          desc: '板前が仕上げる会席3コースと、牛もつ鍋・〆ラーメン付きの大皿プラン。10名様以上は送迎バス無料、宿泊パックもあり。幹事様も安心のにぎやかな宴を。',
+          price: '会席 4,500円～／大皿 4,000円～・飲み放題 2,500円',
+          end: '2026-12-30' },
+        { photo: 'images/hero2_osechi.jpg', href: 'news_osechi/',
+          bg: 'linear-gradient(110deg, #460e18 0%, #86202e 50%, #460e18 100%)',
+          badge: '数量限定｜ご予約受付中',
+          catch: '新年の食卓に 350年の伝統の味',
+          title: '2027年 おせち料理',
+          desc: '板場が一品ずつ丹精込めて仕込む手づくりのおせち。和風二段重25,000円から特選三段重55,000円まで、全3種をご用意しました。',
+          price: '25,000円（税込）～・全3種',
+          end: '2026-12-28' },
+        { photo: 'images/hero2_shinnenkai.jpg', href: 'shinnenkai.html',
+          bg: 'linear-gradient(110deg, #3c0f14 0%, #6d1620 55%, #3c0f14 100%)',
+          badge: '1月2日スタート｜ご予約受付中',
+          catch: '新しい年の門出は 華やかな宴から',
+          title: '新年会プラン',
+          desc: '新春にふさわしい会席3コースと、ローストビーフやすき鍋を囲む大皿プラン。少人数から最大150名様まで、賀詞交歓会・会社の新年会に。',
+          price: '会席 4,500円～／大皿 4,000円～・飲み放題 2,500円',
+          start: '2026-12-01', end: '2027-02-28' },
+        { photo: 'images/hero2_ehomaki.jpg', href: 'news_ehomaki/',
+          bg: 'linear-gradient(110deg, #0e2318 0%, #1d4030 55%, #0e2318 100%)',
+          badge: '節分｜2月2日・3日お渡し',
+          catch: '一年の福を願う 特別な一本',
+          title: 'ホテル丸治 特製恵方巻',
+          desc: 'カジキカツ・玉子焼・きんぴら・水菜・ゆずからしマヨネーズ。和の職人が一本ずつ丁寧に巻き上げる、数量限定の味わいです。',
+          price: '1本 1,000円（税込）',
+          start: '2026-12-15', end: '2027-02-03' }
       ];
       var today = new Date(); today.setHours(0,0,0,0);
       function d(x){ var p = x.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
@@ -615,7 +657,9 @@
         if (sl.end && today > d(sl.end)) return false;
         return true;
       });
-      if (!slides.length) slides = [{ img: 'images/hero_new.jpg', href: 'plan.html', badge: '', title: '季節の宴会プラン', sub: '' }];
+      if (!slides.length) slides = [{ photo: 'images/hero_new.jpg', href: 'plan.html',
+        bg: 'linear-gradient(110deg, #40101a, #7a1824)', badge: '', catch: '',
+        title: '季節の宴会プラン', desc: '', price: '' }];
 
       var track = document.getElementById('hs-track');
       var dotsEl = document.getElementById('hs-dots');
@@ -623,20 +667,24 @@
         var a = document.createElement('a');
         a.className = 'hs-slide' + (i === 0 ? ' is-active' : '');
         a.href = sl.href;
-        a.innerHTML = '<img src="' + sl.img + '" alt="' + sl.title + '"' + (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') + '>' +
-          '<div class="hs-shade"></div>' +
+        a.style.background = sl.bg;
+        a.innerHTML = '<div class="hs-inner">' +
           '<div class="hs-text">' +
             (sl.badge ? '<span class="hs-badge">' + sl.badge + '</span>' : '') +
-            '<span class="hs-title">' + sl.title + '</span>' +
-            (sl.sub ? '<span class="hs-sub">' + sl.sub + '</span>' : '') +
-            '<span class="hs-more">詳しく見る <i class="fas fa-arrow-right" aria-hidden="true"></i></span>' +
-          '</div>';
+            (sl.catch ? '<p class="hs-catch">' + sl.catch + '</p>' : '') +
+            '<p class="hs-title">' + sl.title + '</p>' +
+            (sl.desc ? '<p class="hs-desc">' + sl.desc + '</p>' : '') +
+            (sl.price ? '<p class="hs-price">' + sl.price + '</p>' : '') +
+            '<span class="hs-more">詳しく見る・ご予約 <i class="fas fa-arrow-right" aria-hidden="true"></i></span>' +
+          '</div>' +
+          '<div class="hs-photo"><img src="' + sl.photo + '" alt="' + sl.title.replace('<br>', ' ') + '"' + (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') + '></div>' +
+        '</div>';
         track.appendChild(a);
         var dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'hs-dot' + (i === 0 ? ' is-active' : '');
         dot.setAttribute('aria-label', (i + 1) + '枚目を表示');
-        dot.addEventListener('click', function(){ go(i); restart(); });
+        dot.addEventListener('click', function(ev){ ev.preventDefault(); go(i); restart(); });
         dotsEl.appendChild(dot);
       });
 
@@ -648,7 +696,7 @@
         items[cur].classList.add('is-active'); dots[cur].classList.add('is-active');
       }
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      function start(){ if (reduced || slides.length < 2 || timer) return; timer = setInterval(function(){ go(cur + 1); }, 6000); }
+      function start(){ if (reduced || slides.length < 2 || timer) return; timer = setInterval(function(){ go(cur + 1); }, 4000); }
       function stop(){ if (timer) { clearInterval(timer); timer = null; } }
       function restart(){ stop(); start(); }
       document.getElementById('hs-prev').addEventListener('click', function(){ go(cur - 1); restart(); });
