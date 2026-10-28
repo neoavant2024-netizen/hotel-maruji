@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=17">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -184,6 +184,22 @@
     </div>
   </footer>
 
+  <script>
+    (function(){
+      try {
+        var p = new URLSearchParams(location.search).get('plan');
+        if (!p || p.length > 40) return;
+        var msg = document.getElementById('message');
+        if (msg && !msg.value) msg.value = '【' + p + '】の予約・見積りを希望します。
+希望日：
+ご人数：
+その他ご要望：';
+        document.querySelectorAll('input[name="お問い合わせ種別"]').forEach(function(r){
+          if (r.value.indexOf('宴会') !== -1) r.checked = true;
+        });
+      } catch(e) {}
+    })();
+  </script>
 </body>
 </html>
 

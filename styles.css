@@ -274,8 +274,8 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 /* Hero */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  height: 74vh;
+  min-height: 560px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,6 +322,8 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.hero-title .kw { display: inline-block; }
 
 .hero-title .highlight {
   color: var(--color-accent);
@@ -721,11 +723,11 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .hero-title .highlight {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
   }
   
   .info-card {
@@ -1392,4 +1394,33 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
     font-size: 0.88rem;
     border-radius: 0;
   }
+}
+
+
+/* --- 季節の宴会プラン（ファーストビュー） --- */
+.season-plans { margin-top: -110px; position: relative; z-index: 5; padding-bottom: 0.5rem; }
+.season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+.season-card { display: flex; flex-direction: column; background: var(--color-white); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); text-decoration: none; color: inherit; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.season-card:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25); }
+.season-card-img { position: relative; aspect-ratio: 16 / 11; overflow: hidden; background: #f3ecdf; }
+.season-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease; }
+.season-card:hover .season-card-img img { transform: scale(1.05); }
+.season-badge { position: absolute; top: 10px; left: 10px; background: #921E2C; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 1px; }
+.season-card-body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.3rem; flex: 1; }
+.season-card-body h2 { font-family: var(--font-heading); font-size: 1.12rem; color: var(--color-primary); margin: 0; }
+.season-price { color: #921E2C; font-weight: 700; font-size: 1rem; margin: 0; }
+.season-price small { color: #888; font-weight: 400; font-size: 0.78rem; }
+.season-period { color: #8c7348; font-size: 0.8rem; margin: 0; }
+.season-more { margin-top: auto; padding-top: 0.5rem; color: #8c7348; font-size: 0.85rem; font-weight: 700; }
+.season-more i { font-size: 0.75rem; margin-left: 4px; transition: transform 0.2s ease; }
+.season-card:hover .season-more i { transform: translateX(4px); }
+@media (max-width: 992px) {
+  .season-grid { grid-template-columns: repeat(2, 1fr); }
+  .season-plans { margin-top: -70px; }
+}
+@media (max-width: 576px) {
+  .season-grid { gap: 0.8rem; }
+  .season-card-body { padding: 0.8rem 0.85rem 1rem; }
+  .season-card-body h2 { font-size: 0.98rem; }
+  .season-price { font-size: 0.92rem; }
 }

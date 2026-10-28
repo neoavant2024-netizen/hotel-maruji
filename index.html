@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=16">
+  <link rel="stylesheet" href="styles.css?v=17">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -81,60 +81,6 @@
   ]
 }
   </script>
-
-  <style>
-    /* ヒーロー内 宴会プラン枠線ボタン（画像完全準拠） */
-    .hero-plan-buttons {
-      display: flex !important;
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-      gap: 16px !important;
-      max-width: 940px !important;
-      margin: 0 auto 3.5rem !important;
-      padding-top: 15px !important;
-      z-index: 10 !important;
-      position: relative !important;
-    }
-    .hero-btn-plan {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      background-color: #ffffff !important;
-      color: #333333 !important;
-      border: 1px solid #8c7348 !important;
-      border-radius: 0px !important;
-      -webkit-border-radius: 0px !important;
-      text-decoration: none !important;
-      padding: 16px 32px !important;
-      font-size: 1.05rem !important;
-      font-weight: 500 !important;
-      letter-spacing: 0.05em !important;
-      transition: all 0.25s ease !important;
-      min-width: 180px !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
-      box-sizing: border-box !important;
-    }
-    .hero-btn-plan:hover {
-      background-color: #8c7348 !important;
-      color: #ffffff !important;
-      border-color: #8c7348 !important;
-      transform: translateY(-2px) !important;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
-    }
-    @media (max-width: 768px) {
-      .hero-plan-buttons {
-        gap: 8px !important;
-        margin-bottom: 2rem !important;
-        padding-top: 50px !important;
-      }
-      .hero-btn-plan {
-        flex: 1 1 calc(50% - 10px) !important;
-        min-width: 130px !important;
-        padding: 12px 6px !important;
-        font-size: 0.88rem !important;
-      }
-    }
-  </style>
 
 </head>
 <body>
@@ -183,28 +129,62 @@
   <section class="hero fade-in">
     <div class="hero-image-wrapper">
       <!-- Using original image from maruji.info -->
-      <img src="images/hero_new.jpg" alt="宇都宮のビジネス・宴会・法要の拠点" class="hero-image">
+      <img src="images/hero_new.jpg" alt="宇都宮の宴会・大型宴会 ホテル丸治" class="hero-image" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <!-- 宴会プラン リンクボタン -->
-      <div class="hero-plan-buttons">
-        <a href="plan_bounen_kaiseki.html" class="hero-btn-plan">忘年会　会席</a>
-        <a href="plan_bounen_ozara.html" class="hero-btn-plan">忘年会　大皿</a>
-        <a href="plan_shinnen_kaiseki.html" class="hero-btn-plan">新年会　会席</a>
-        <a href="plan_shinnen_ozara.html" class="hero-btn-plan">新年会　大皿</a>
-        <a href="plan_sotsuen.html" class="hero-btn-plan">卒園パーティ</a>
-        <a href="plan_sotsudan.html" class="hero-btn-plan">卒団式プラン</a>
-      </div>
-
       <h1 class="hero-title">
         宇都宮の宴会・大型宴会なら<br>
-        <span class="highlight">350年伝承</span>の東武宇都宮駅前 ホテル丸治
+        <span class="highlight">350年伝承</span>の<span class="kw">東武宇都宮駅前</span>&#8203;<span class="kw">ホテル丸治</span>
       </h1>
       <p class="hero-subtitle">あたたかいおもてなしでお客様をお迎え致しております。</p>
       <div class="hero-cta">
         <a href="contact.html" class="btn btn-primary btn-lg">宴会・ご予約のお問い合わせ</a>
         <a href="banquet.html" class="btn btn-outline btn-lg">宴会場を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 季節の宴会プラン（ファーストビュー） -->
+  <section class="season-plans fade-in" aria-label="季節の宴会プラン">
+    <div class="container">
+      <div class="season-grid">
+        <a href="bounenkai.html" class="season-card">
+          <div class="season-card-img"><img src="images/plan_bounen_kaiseki.jpg" alt="宇都宮の忘年会プラン 会席・大皿 ホテル丸治" loading="lazy"><span class="season-badge">今季受付中</span></div>
+          <div class="season-card-body">
+            <h2>忘年会プラン</h2>
+            <p class="season-price">お1人様 4,000円～ <small>飲み放題 2,500円</small></p>
+            <p class="season-period">11月16日～12月30日</p>
+            <span class="season-more">詳しく見る <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a href="shinnenkai.html" class="season-card">
+          <div class="season-card-img"><img src="images/plan_shinnen_kaiseki.jpg" alt="宇都宮の新年会プラン 会席・大皿 ホテル丸治" loading="lazy"><span class="season-badge">予約受付中</span></div>
+          <div class="season-card-body">
+            <h2>新年会プラン</h2>
+            <p class="season-price">お1人様 4,000円～ <small>飲み放題 2,500円</small></p>
+            <p class="season-period">2027年1月2日～2月28日</p>
+            <span class="season-more">詳しく見る <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a href="shaonkai.html" class="season-card">
+          <div class="season-card-img"><img src="images/plan_sotsuen.jpg" alt="宇都宮の謝恩会・卒園パーティープラン ホテル丸治" loading="lazy"><span class="season-badge">2時間飲み放題付</span></div>
+          <div class="season-card-body">
+            <h2>謝恩会・卒園パーティー</h2>
+            <p class="season-price">大人 6,000円 <small>お子様料金あり</small></p>
+            <p class="season-period">ブッフェ／着席コース・最大120名</p>
+            <span class="season-more">詳しく見る <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+        <a href="sotsudan.html" class="season-card">
+          <div class="season-card-img"><img src="images/plan_sotsudan.jpg" alt="宇都宮の卒団式・壮行会プラン ホテル丸治" loading="lazy"><span class="season-badge">宴会3時間</span></div>
+          <div class="season-card-body">
+            <h2>卒団式・壮行会</h2>
+            <p class="season-price">大人 6,000円 <small>小中学生 4,000円</small></p>
+            <p class="season-period">飲み放題付き・映像上映OK</p>
+            <span class="season-more">詳しく見る <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -398,11 +378,11 @@
         <div class="scene-grid">
           <div class="scene-item">
             <h3>忘年会</h3>
-            <p>会社の忘年会から気の合う仲間の飲み会まで、宇都宮での忘年会はホテル丸治へ。会席プラン4,500円～／大皿プラン4,000円～に飲み放題（2,500円）を付けて、最大150名様までにぎやかにお楽しみいただけます。<a href="plan.html#bounen-kaiseki">忘年会プランの詳細はこちら</a></p>
+            <p>会社の忘年会から気の合う仲間の飲み会まで、宇都宮での忘年会はホテル丸治へ。会席プラン4,500円～／大皿プラン4,000円～に飲み放題（2,500円）を付けて、最大150名様までにぎやかにお楽しみいただけます。<a href="bounenkai.html">忘年会プランの詳細はこちら</a></p>
           </div>
           <div class="scene-item">
             <h3>新年会</h3>
-            <p>新春の顔合わせや賀詞交歓会に。彩・雅・絢爛の3つの会席コースと、ローストビーフやすき鍋を囲む大皿プランをご用意し、1月2日から承ります。<a href="plan.html#shinnen-kaiseki">新年会プランの詳細はこちら</a></p>
+            <p>新春の顔合わせや賀詞交歓会に。彩・雅・絢爛の3つの会席コースと、ローストビーフやすき鍋を囲む大皿プランをご用意し、1月2日から承ります。<a href="shinnenkai.html">新年会プランの詳細はこちら</a></p>
           </div>
           <div class="scene-item">
             <h3>歓送迎会・送別会</h3>
@@ -410,11 +390,11 @@
           </div>
           <div class="scene-item">
             <h3>謝恩会・卒園パーティー</h3>
-            <p>幼稚園・保育園・学校の謝恩会に。ブッフェと着席コースから選べる2時間飲み放題付きプランで、お子様料金もご用意。最大120名様まで対応します。<a href="plan.html#sotsuen">謝恩会プランの詳細はこちら</a></p>
+            <p>幼稚園・保育園・学校の謝恩会に。ブッフェと着席コースから選べる2時間飲み放題付きプランで、お子様料金もご用意。最大120名様まで対応します。<a href="shaonkai.html">謝恩会プランの詳細はこちら</a></p>
           </div>
           <div class="scene-item">
             <h3>卒団式・壮行会</h3>
-            <p>スポーツ少年団・部活動チームのお集まりに。プロジェクターとスクリーンで思い出の映像を上映でき、宴会時間は3時間に延長。お子様料金ありの応援プランです。<a href="plan.html#sotsudan">卒団式プランの詳細はこちら</a></p>
+            <p>スポーツ少年団・部活動チームのお集まりに。プロジェクターとスクリーンで思い出の映像を上映でき、宴会時間は3時間に延長。お子様料金ありの応援プランです。<a href="sotsudan.html">卒団式プランの詳細はこちら</a></p>
           </div>
           <div class="scene-item">
             <h3>同窓会・クラス会</h3>

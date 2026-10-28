@@ -19,7 +19,7 @@
     })(window, document, "clarity", "script", "vqbc1qlo48");
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="宇都宮の宴会プラン一覧。忘年会・新年会は会席4,500円～／大皿4,000円～、飲み放題2,500円。謝恩会・卒園パーティー・卒団式プランもご用意。最大180名の大型宴会に対応、送迎バスあり。東武宇都宮駅前のホテル丸治。">
+  <meta name="description" content="宇都宮の宴会プラン一覧。忘年会・新年会（会席4,500円～／大皿4,000円～・飲み放題2,500円）、謝恩会・卒園パーティー、卒団式・壮行会プランをご用意。最大180名の大型宴会に対応、送迎バスあり。東武宇都宮駅前のホテル丸治。">
   <meta name="keywords" content="宇都宮 宴会プラン,宇都宮 忘年会,宇都宮 新年会,宇都宮 謝恩会,宇都宮 卒団式,宇都宮 大型宴会,ホテル丸治">
 
   <title>宴会プラン一覧｜忘年会・新年会・謝恩会・卒団式｜宇都宮 ホテル丸治</title>
@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=17">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -53,7 +53,24 @@
   </script>
 
   <script src="main.js" defer></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <style>
+    .hub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 1000px; margin: 0 auto; }
+    .hub-card { background: #fff; border: 1px solid #e2dcd2; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.06); display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
+    .hub-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+    .hub-card-img { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+    .hub-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hub-badge { position: absolute; top: 12px; left: 12px; background: #921E2C; color: #fff; font-size: 0.78rem; font-weight: 700; padding: 5px 12px; border-radius: 3px; letter-spacing: 1px; }
+    .hub-card-body { padding: 1.5rem 1.5rem 1.7rem; display: flex; flex-direction: column; flex: 1; }
+    .hub-card-body h2 { font-family: var(--font-heading); color: #5a4a2f; font-size: 1.3rem; margin: 0 0 6px; }
+    .hub-price { color: #921E2C; font-weight: 700; font-size: 1.15rem; margin-bottom: 4px; }
+    .hub-price small { color: #888; font-weight: 400; font-size: 0.8rem; }
+    .hub-period { color: #8c7348; font-size: 0.85rem; margin-bottom: 10px; }
+    .hub-card-body p.hub-desc { color: #666; font-size: 0.92rem; line-height: 1.8; margin: 0 0 1.2rem; flex: 1; }
+    .hub-card-body .hub-btn { display: block; text-align: center; background: #8c7348; color: #fff; padding: 0.85rem 1rem; border-radius: 4px; text-decoration: none; font-weight: 700; transition: opacity 0.2s; }
+    .hub-card-body .hub-btn:hover { opacity: 0.85; }
+    .hub-common { max-width: 1000px; margin: 50px auto 0; }
+    @media (max-width: 768px) { .hub-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body class="subpage">
 
@@ -101,7 +118,7 @@
   <section class="page-header">
     <div class="container">
       <h1 class="section-title">宴会プラン<span>Banquet Plans</span></h1>
-      <p class="page-header-lead">宇都宮で宴会・パーティーをお考えなら、東武宇都宮駅前のホテル丸治へ。忘年会・新年会の会席／大皿プラン、謝恩会・卒園パーティー、スポーツチームの卒団式・壮行会まで、少人数から最大180名様の大型宴会に対応した宴会プランをご用意しています。全プラン飲み放題あり、10名様以上でマイクロバス送迎無料です。</p>
+      <p class="page-header-lead">宇都宮で宴会・パーティーをお考えなら、東武宇都宮駅前のホテル丸治へ。忘年会・新年会、謝恩会・卒園パーティー、スポーツチームの卒団式・壮行会まで、季節とシーンに合わせた宴会プランをご用意しています。全プラン飲み放題あり、10名様以上でマイクロバス送迎無料です。</p>
     </div>
   </section>
 
@@ -116,489 +133,83 @@
 
   <!-- Main Content -->
   <main id="main">
+    <section class="section">
+      <div class="container">
 
+        <div class="hub-grid">
+          <article class="hub-card">
+            <div class="hub-card-img">
+              <span class="hub-badge">11/16～12/30</span>
+              <img src="images/plan_bounen_kaiseki.jpg" alt="宇都宮の忘年会プラン ホテル丸治" loading="lazy">
+            </div>
+            <div class="hub-card-body">
+              <h2>忘年会プラン</h2>
+              <div class="hub-price">お1人様 4,000円～<small>（税込）</small></div>
+              <div class="hub-period">会席 4,500円～／大皿 4,000円～・飲み放題 2,500円</div>
+              <p class="hub-desc">板前が仕上げる会席と、鍋・〆ラーメン付きの大皿プランの2タイプ。最大150名様までの大型忘年会に対応し、宿泊パック・団体割引もご用意しています。</p>
+              <a class="hub-btn" href="bounenkai.html">忘年会プランを見る</a>
+            </div>
+          </article>
 
-  <style>
-    .plan-buttons-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 50px;
-    }
-    .plan-buttons-grid a.btn-plan {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       background-color: transparent;
-       color: #333;
-       border: 1px solid #8c7348;
-       border-radius: 2px;
-       text-decoration: none;
-       padding: 15px 30px;
-       font-size: 1rem;
-       transition: all 0.3s;
-       min-width: 180px;
-    }
-    .plan-buttons-grid a.btn-plan:hover {
-       background-color: #8c7348;
-       color: #fff;
-    }
+          <article class="hub-card">
+            <div class="hub-card-img">
+              <span class="hub-badge">2027年 1/2～2/28</span>
+              <img src="images/plan_shinnen_kaiseki.jpg" alt="宇都宮の新年会プラン ホテル丸治" loading="lazy">
+            </div>
+            <div class="hub-card-body">
+              <h2>新年会プラン</h2>
+              <div class="hub-price">お1人様 4,000円～<small>（税込）</small></div>
+              <div class="hub-period">会席 4,500円～／大皿 4,000円～・飲み放題 2,500円</div>
+              <p class="hub-desc">新春にふさわしい彩り豊かな会席と、ローストビーフやすき鍋を囲む大皿プラン。1月2日から承ります。賀詞交歓会・会社の新年会に。</p>
+              <a class="hub-btn" href="shinnenkai.html">新年会プランを見る</a>
+            </div>
+          </article>
 
-    html {
-      scroll-behavior: smooth;
-    }
-    .plan-section {
-      padding-top: 50px;
-      margin-top: 60px;
-      border-top: 2px dashed #ddd;
-      scroll-margin-top: 100px;
-    }
-    .plan-section h2 {
-      text-align: center;
-      color: #8c7348;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-    }
-    .plan-image-wrapper {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .plan-image-wrapper img {
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-      border-radius: 8px;
-      transition: transform 0.2s;
-      cursor: zoom-in;
-    }
-    .plan-image-wrapper img:hover {
-      transform: scale(1.02);
-    }
+          <article class="hub-card">
+            <div class="hub-card-img">
+              <span class="hub-badge">2時間飲み放題付</span>
+              <img src="images/plan_sotsuen.jpg" alt="宇都宮の謝恩会・卒園パーティープラン ホテル丸治" loading="lazy">
+            </div>
+            <div class="hub-card-body">
+              <h2>謝恩会・卒園パーティープラン</h2>
+              <div class="hub-price">大人 6,000円<small>（税別）</small></div>
+              <div class="hub-period">中学生 4,000円／園児・小学生 3,000円／幼児 1,000円</div>
+              <p class="hub-desc">ブッフェと着席コースから選べる、お子様の門出を祝うパーティープラン。最大120名様。マイク・プロジェクターのご用意もあります。</p>
+              <a class="hub-btn" href="shaonkai.html">謝恩会プランを見る</a>
+            </div>
+          </article>
 
-    /* プラン詳細テキスト */
-    .plan-detail { max-width: 900px; margin: 0 auto; }
-    .pd-lead { line-height: 1.9; color: #444; margin-bottom: 25px; }
-    .pd-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 18px; margin-bottom: 25px; }
-    .pd-meta span { background: #faf7f0; border: 1px solid #e0d8c8; border-radius: 20px; padding: 6px 16px; font-size: 0.9rem; color: #5a4a2f; }
-    .pd-meta span i { color: #8c7348; margin-right: 6px; }
-    .pd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px; }
-    .pd-grid--2 { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin-left: auto; margin-right: auto; }
-    .pd-card { background: #fff; border: 1px solid #e0d8c8; border-radius: 8px; padding: 1.3rem 1.2rem; display: flex; flex-direction: column; }
-    .pd-card h3 { color: #8c7348; font-size: 1.15rem; text-align: center; margin: 0 0 4px; letter-spacing: 1px; }
-    .pd-card .pd-price { text-align: center; font-size: 1.45rem; font-weight: bold; color: #921E2C; margin-bottom: 12px; }
-    .pd-card .pd-price small { font-size: 0.8rem; font-weight: normal; color: #666; }
-    .pd-card ul { list-style: none; margin: 0; padding: 12px 0 0; border-top: 1px dashed #d8cfbd; font-size: 0.92rem; line-height: 1.8; color: #444; }
-    .pd-card ul li::before { content: "・"; color: #8c7348; }
-    .pd-info { background: #faf7f0; border-radius: 8px; padding: 1.2rem 1.5rem; margin-bottom: 15px; font-size: 0.95rem; line-height: 1.9; color: #444; }
-    .pd-info strong { color: #8c7348; }
-    .pd-info ul { list-style: none; margin: 0; padding: 0; }
-    .pd-info ul li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #8c7348; margin-right: 8px; }
-    .pd-note { font-size: 0.85rem; color: #777; line-height: 1.8; }
-    @media (max-width: 768px) {
-      .pd-grid, .pd-grid--2 { grid-template-columns: 1fr; }
-    }
-  </style>
-
-  <section class="section">
-    <div class="container" style="max-width: 960px;">
-      <p style="text-align: center; color: #8c7348; margin-bottom: 30px; font-weight: bold;"><i class="fas fa-hand-pointer"></i> 各プランのボタンをクリックすると、専用の詳細ページをご覧いただけます。</p>
-      <div class="plan-buttons-grid">
-        <a href="#bounen-kaiseki" class="btn-plan">忘年会　会席</a>
-        <a href="#bounen-ozara" class="btn-plan">忘年会　大皿</a>
-        <a href="#shinnen-kaiseki" class="btn-plan">新年会　会席</a>
-        <a href="#shinnen-ozara" class="btn-plan">新年会　大皿</a>
-        <a href="#sotsuen" class="btn-plan">卒園パーティ</a>
-        <a href="#sotsudan" class="btn-plan">卒団式プラン</a>
-      </div>
-
-    <!-- 忘年会 会席 -->
-    <div id="bounen-kaiseki" class="plan-section">
-      <h2>忘年会 会席プラン</h2>
-      <div class="plan-image-wrapper">
-        <a href="images/plan_bounen_kaiseki.jpg" data-fancybox="gallery" title="クリックして拡大">
-          <img src="images/plan_bounen_kaiseki.jpg" alt="宇都宮の忘年会 会席プラン 彩4,500円・雅5,500円・絢爛6,500円 ホテル丸治" loading="lazy">
-        </a>
-        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
-      </div>
-      <div class="plan-detail">
-        <p class="pd-lead">宇都宮での忘年会は、気取らず楽しめる華やかな会席プランで。板前が一品ずつ仕上げる本格会席を、ご予算に合わせて3つのコースからお選びいただけます。最大150名様までの大型宴会に対応し、お得な宿泊パック・団体様割引もございます。</p>
-        <div class="pd-meta">
-          <span><i class="fas fa-calendar-alt"></i>期間 11月16日～12月30日</span>
-          <span><i class="fas fa-users"></i>最大150名様まで</span>
-          <span><i class="fas fa-bus"></i>10名様以上で送迎無料</span>
-          <span><i class="fas fa-bed"></i>お得な宿泊パックあり</span>
+          <article class="hub-card">
+            <div class="hub-card-img">
+              <span class="hub-badge">宴会3時間</span>
+              <img src="images/plan_sotsudan.jpg" alt="宇都宮の卒団式・壮行会プラン ホテル丸治" loading="lazy">
+            </div>
+            <div class="hub-card-body">
+              <h2>卒団式・壮行会プラン</h2>
+              <div class="hub-price">大人 6,000円<small>（税込）</small></div>
+              <div class="hub-period">小中学生 4,000円／幼児 2,000円・飲み放題付き</div>
+              <p class="hub-desc">スポーツチームの卒団式・壮行会・決起集会を応援する大皿・ブッフェプラン。宴会3時間、プロジェクターで思い出の映像上映もできます。</p>
+              <a class="hub-btn" href="sotsudan.html">卒団式プランを見る</a>
+            </div>
+          </article>
         </div>
-        <div class="pd-grid">
-          <div class="pd-card">
-            <h3>彩 IRODORI</h3>
-            <div class="pd-price">4,500円<small>（税込）</small></div>
-            <ul>
-              <li>箸付</li>
-              <li>前菜五種</li>
-              <li>向付</li>
-              <li>焼肴</li>
-              <li>油物</li>
-              <li>強肴</li>
-              <li>食事</li>
-              <li>水物</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>雅 MIYABI</h3>
-            <div class="pd-price">5,500円<small>（税込）</small></div>
-            <ul>
-              <li>箸付</li>
-              <li>前菜五種</li>
-              <li>向付</li>
-              <li>焼肴</li>
-              <li>煮物</li>
-              <li>油物</li>
-              <li>強肴</li>
-              <li>食事</li>
-              <li>水物</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>絢爛 KENRAN</h3>
-            <div class="pd-price">6,500円<small>（税込）</small></div>
-            <ul>
-              <li>箸付</li>
-              <li>前菜七種</li>
-              <li>椀物</li>
-              <li>向付</li>
-              <li>焼肴</li>
-              <li>煮物</li>
-              <li>油物</li>
-              <li>強肴</li>
-              <li>食事</li>
-              <li>水物</li>
+
+        <div class="hub-common">
+          <div class="plan-card">
+            <h2 style="font-family: var(--font-heading); color: #5a4a2f; font-size: 1.3rem; margin-bottom: 1rem;">全プラン共通のご案内</h2>
+            <ul class="plan-list-main">
+              <li><i class="fas fa-bus"></i> 10名様以上のご予約で28名乗りマイクロバス送迎無料（要予約）</li>
+              <li><i class="fas fa-users"></i> 少人数の個室から最大180名様の大型宴会まで、ご人数に合わせて<a href="banquet.html">宴会場</a>をご用意</li>
+              <li><i class="fas fa-utensils"></i> 月替わりの<a href="food.html">会席料理</a>（4,500円・5,500円・6,500円）もご宴会でご利用いただけます</li>
+              <li><i class="fas fa-bed"></i> 宴会後はそのまま泊まれるお得な宿泊パックあり（<a href="https://www.maruji.jp/" target="_blank" rel="noopener">ご宿泊はこちら</a>）</li>
+              <li><i class="fas fa-clock"></i> ご宴会場のご利用時間は基本2時間（卒団式プランは3時間）</li>
             </ul>
           </div>
         </div>
-        <div class="pd-info">
-          <ul>
-            <li><strong>ドリンク飲み放題 ＋2,500円（税込）</strong>　瓶ビール・日本酒・焼酎・ワイン・ハイボール・レモンサワー・梅酒・ソフトドリンク</li>
-            <li>10名様以上のご予約でマイクロバス送迎無料（要予約）</li>
-            <li>みんなで宿泊できるお得な宿泊パック・団体様割引あり。くわしくはスタッフまでお問い合わせください</li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <!-- 忘年会 大皿 -->
-    <div id="bounen-ozara" class="plan-section">
-      <h2>忘年会 大皿プラン</h2>
-      <div class="plan-image-wrapper">
-        <a href="images/plan_bounen_ozara.jpg" data-fancybox="gallery" title="クリックして拡大">
-          <img src="images/plan_bounen_ozara.jpg" alt="宇都宮の忘年会 大皿プラン スタンダード4,000円・プレミアム4,500円・プラチナ5,500円 ホテル丸治" loading="lazy">
-        </a>
-        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
       </div>
-      <div class="plan-detail">
-        <p class="pd-lead">大人数の宴会・パーティーには、みんなで取り分けて楽しめる大皿プランがおすすめ。牛もつ鍋や〆ラーメンまで付いたボリューム満点の内容で、宇都宮での会社の忘年会・仲間内の宴会に最適です。</p>
-        <div class="pd-meta">
-          <span><i class="fas fa-calendar-alt"></i>期間 11月16日～12月30日</span>
-          <span><i class="fas fa-users"></i>最大150名様まで</span>
-          <span><i class="fas fa-bus"></i>10名様以上で送迎無料</span>
-        </div>
-        <div class="pd-grid">
-          <div class="pd-card">
-            <h3>スタンダード</h3>
-            <div class="pd-price">4,000円<small>（税込）</small></div>
-            <ul>
-              <li>焼き野菜と生ハムサラダ</li>
-              <li>鰤炙りカルパッチョ</li>
-              <li>牛肉赤ワイン味噌煮込み</li>
-              <li>白身魚のフリット</li>
-              <li>牛もつ鍋 醤油仕立て</li>
-              <li>〆ラーメン</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>プレミアム</h3>
-            <div class="pd-price">4,500円<small>（税込）</small></div>
-            <ul>
-              <li>焼き野菜と生ハムサラダ</li>
-              <li>鰤炙りカルパッチョ</li>
-              <li>牛肉赤ワイン味噌煮込み</li>
-              <li>白身魚のフリット</li>
-              <li>骨付き鶏肉ロースト</li>
-              <li>牛もつ鍋 醤油仕立て</li>
-              <li>〆ラーメン</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>プラチナ</h3>
-            <div class="pd-price">5,500円<small>（税込）</small></div>
-            <ul>
-              <li>焼き野菜と生ハムサラダ</li>
-              <li>鰤炙りカルパッチョ</li>
-              <li>牛肉赤ワイン味噌煮込み</li>
-              <li>海老のフリット</li>
-              <li>骨付き鶏肉ロースト</li>
-              <li>牛もつ鍋 醤油仕立て</li>
-              <li>〆ラーメン</li>
-              <li>クリームブリュレ</li>
-            </ul>
-          </div>
-        </div>
-        <div class="pd-info">
-          <ul>
-            <li><strong>ドリンク飲み放題 ＋2,500円（税込）</strong>　瓶ビール・日本酒・焼酎・ワイン・ハイボール・レモンサワー・梅酒・ソフトドリンク</li>
-            <li>10名様以上のご予約でマイクロバス送迎無料（要予約）</li>
-            <li>お得な宿泊パック・団体様割引あり</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- 新年会 会席 -->
-    <div id="shinnen-kaiseki" class="plan-section">
-      <h2>新年会 会席プラン</h2>
-      <div class="plan-image-wrapper">
-        <a href="images/plan_shinnen_kaiseki.jpg" data-fancybox="gallery" title="クリックして拡大">
-          <img src="images/plan_shinnen_kaiseki.jpg" alt="宇都宮の新年会 会席プラン 彩4,500円・雅5,500円・絢爛6,500円 ホテル丸治" loading="lazy">
-        </a>
-        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
-      </div>
-      <div class="plan-detail">
-        <p class="pd-lead">新年のスタートを飾る宇都宮での新年会に。新春にふさわしい彩り豊かな会席コースを3つのご予算からお選びいただけます。少人数のお集まりから最大150名様の大型宴会まで、会場・お席のレイアウトも柔軟に対応いたします。</p>
-        <div class="pd-meta">
-          <span><i class="fas fa-calendar-alt"></i>期間 2027年1月2日（土）～2月28日（日）</span>
-          <span><i class="fas fa-users"></i>少人数から最大150名様まで</span>
-          <span><i class="fas fa-bus"></i>10名様以上で送迎無料</span>
-        </div>
-        <div class="pd-grid">
-          <div class="pd-card">
-            <h3>彩 IRODORI</h3>
-            <div class="pd-price">4,500円<small>（税込）</small></div>
-            <ul>
-              <li>箸付</li>
-              <li>前菜五種</li>
-              <li>向付</li>
-              <li>焼肴</li>
-              <li>油物</li>
-              <li>強肴</li>
-              <li>食事</li>
-              <li>水物</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>雅 MIYABI</h3>
-            <div class="pd-price">5,500円<small>（税込）</small></div>
-            <ul>
-              <li>箸付</li>
-              <li>前菜五種</li>
-              <li>向付</li>
-              <li>焼肴</li>
-              <li>煮物</li>
-              <li>油物</li>
-              <li>強肴</li>
-              <li>食事</li>
-              <li>水物</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>絢爛 KENRAN</h3>
-            <div class="pd-price">6,500円<small>（税込）</small></div>
-            <ul>
-              <li>箸付</li>
-              <li>前菜七種</li>
-              <li>椀物</li>
-              <li>向付</li>
-              <li>焼肴</li>
-              <li>煮物</li>
-              <li>油物</li>
-              <li>強肴</li>
-              <li>食事</li>
-              <li>水物</li>
-            </ul>
-          </div>
-        </div>
-        <div class="pd-info">
-          <ul>
-            <li><strong>飲み放題 2,500円（税込）</strong>　瓶ビール・日本酒・焼酎・ワイン・ハイボール・レモンサワー・梅酒・ソフトドリンク</li>
-            <li>10名様以上のご予約でマイクロバス送迎無料（要予約）</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- 新年会 大皿 -->
-    <div id="shinnen-ozara" class="plan-section">
-      <h2>新年会 大皿プラン</h2>
-      <div class="plan-image-wrapper">
-        <a href="images/plan_shinnen_ozara.jpg" data-fancybox="gallery" title="クリックして拡大">
-          <img src="images/plan_shinnen_ozara.jpg" alt="宇都宮の新年会 大皿プラン スタンダード4,000円・プレミアム4,500円・プラチナ5,500円 ホテル丸治" loading="lazy">
-        </a>
-        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
-      </div>
-      <div class="plan-detail">
-        <p class="pd-lead">ローストビーフやすき鍋を囲んでにぎやかに楽しむ、新年会向けの大皿プランです。職場の新年会・懇親会など、宇都宮での大人数の宴会にちょうど良いボリュームと価格でご用意しました。</p>
-        <div class="pd-meta">
-          <span><i class="fas fa-calendar-alt"></i>期間 2027年1月2日（土）～2月28日（日）</span>
-          <span><i class="fas fa-users"></i>少人数から最大150名様まで</span>
-          <span><i class="fas fa-bus"></i>10名様以上で送迎無料</span>
-        </div>
-        <div class="pd-grid">
-          <div class="pd-card">
-            <h3>スタンダード</h3>
-            <div class="pd-price">4,000円<small>（税込）</small></div>
-            <ul>
-              <li>ローストビーフ</li>
-              <li>真鯛のカルパッチョ</li>
-              <li>鶏肉のラタトゥイユ</li>
-              <li>八宝菜</li>
-              <li>すき鍋</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>プレミアム</h3>
-            <div class="pd-price">4,500円<small>（税込）</small></div>
-            <ul>
-              <li>ローストビーフ</li>
-              <li>真鯛のカルパッチョ</li>
-              <li>鶏肉のラタトゥイユ</li>
-              <li>八宝菜</li>
-              <li>海老カダイフ揚げ</li>
-              <li>すき鍋</li>
-            </ul>
-          </div>
-          <div class="pd-card">
-            <h3>プラチナ</h3>
-            <div class="pd-price">5,500円<small>（税込）</small></div>
-            <ul>
-              <li>ローストビーフ</li>
-              <li>真鯛のカルパッチョ</li>
-              <li>豚バラのリヨン風</li>
-              <li>海鮮八宝菜</li>
-              <li>海老カダイフ揚げ</li>
-              <li>すき鍋</li>
-              <li>プリン</li>
-            </ul>
-          </div>
-        </div>
-        <div class="pd-info">
-          <ul>
-            <li><strong>飲み放題 2,500円（税込）</strong>　瓶ビール・日本酒・焼酎・ワイン・ハイボール・レモンサワー・梅酒・ソフトドリンク</li>
-            <li>10名様以上のご予約でマイクロバス送迎無料（要予約）</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- 卒園パーティ -->
-    <div id="sotsuen" class="plan-section">
-      <h2>卒園パーティー・謝恩会プラン</h2>
-      <div class="plan-image-wrapper">
-        <a href="images/plan_sotsuen.jpg" data-fancybox="gallery" title="クリックして拡大">
-          <img src="images/plan_sotsuen.jpg" alt="宇都宮の卒園パーティー・謝恩会プラン 2時間飲み放題付 最大120名様 ホテル丸治" loading="lazy">
-        </a>
-        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
-      </div>
-      <div class="plan-detail">
-        <p class="pd-lead">お子様の門出を祝う卒園パーティー・謝恩会に。ブッフェと着席コースの2スタイルから選べる、2時間飲み放題付きのパーティープランです。最大120名様まで対応し、宇都宮の幼稚園・保育園の謝恩会会場として多くご利用いただいています。</p>
-        <div class="pd-meta">
-          <span><i class="fas fa-glass-cheers"></i>2時間飲み放題付</span>
-          <span><i class="fas fa-users"></i>最大120名様まで</span>
-          <span><i class="fas fa-bus"></i>10名様以上で送迎無料</span>
-        </div>
-        <div class="pd-info">
-          <strong>選べる2コース</strong>
-          <ul>
-            <li>みんなでワイワイ！ブッフェプラン（40名様～）</li>
-            <li>お席でゆったり着席コースプラン（大皿または銘々盛り）</li>
-          </ul>
-        </div>
-        <div class="pd-grid pd-grid--2">
-          <div class="pd-card">
-            <h3>大人・高校生</h3>
-            <div class="pd-price">6,000円<small>（税別）</small></div>
-          </div>
-          <div class="pd-card">
-            <h3>中学生</h3>
-            <div class="pd-price">4,000円<small>（税別）</small></div>
-          </div>
-          <div class="pd-card">
-            <h3>園児・小学生</h3>
-            <div class="pd-price">3,000円<small>（税別）</small></div>
-          </div>
-          <div class="pd-card">
-            <h3>幼児</h3>
-            <div class="pd-price">1,000円<small>（税別）</small></div>
-          </div>
-        </div>
-        <div class="pd-info">
-          <ul>
-            <li><strong>飲み放題</strong>　瓶ビール・ノンアルコールビール・日本酒・焼酎・ワイン・梅酒・ソフトドリンク</li>
-          </ul>
-        </div>
-        <p class="pd-note">※食物アレルギーは事前申請にて特定原材料品目の変更に対応いたします。重度のアレルギーをお持ちのお子様については、コンタミネーションを完全に防ぐことができないため、お控えいただきたい場合がございます。<br>※ご人数の最終確定は、ご宴会の2日前までにお願いいたします。以降の人数減は所定のキャンセル料がかかります。</p>
-      </div>
-    </div>
-
-    <!-- 卒団式プラン -->
-    <div id="sotsudan" class="plan-section">
-      <h2>卒団式・壮行会 応援プラン</h2>
-      <div class="plan-image-wrapper">
-        <a href="images/plan_sotsudan.jpg" data-fancybox="gallery" title="クリックして拡大">
-          <img src="images/plan_sotsudan.jpg" alt="宇都宮のスポーツチーム卒団式・壮行会・決起集会プラン 飲み放題付 ホテル丸治" loading="lazy">
-        </a>
-        <p style="margin-top:15px; color:#666;">※画像をクリックすると大きく拡大表示できます。</p>
-      </div>
-      <div class="plan-detail">
-        <p class="pd-lead">スポーツチームの卒団式・壮行会・決起集会を応援する、大皿・ブッフェ料理のパーティープランです。プロジェクターとスクリーンで思い出の映像をみんなで鑑賞でき、宴会時間も通常の2時間から3時間に延長。宇都宮での少年団・部活動チームのお集まりに最適です。</p>
-        <div class="pd-meta">
-          <span><i class="fas fa-glass-cheers"></i>飲み放題付き</span>
-          <span><i class="fas fa-utensils"></i>大皿・ブッフェ料理（ブッフェは40名様以上）</span>
-          <span><i class="fas fa-bus"></i>10名様以上で送迎無料</span>
-        </div>
-        <div class="pd-grid">
-          <div class="pd-card">
-            <h3>大人・高校生</h3>
-            <div class="pd-price">6,000円<small>（税込）</small></div>
-          </div>
-          <div class="pd-card">
-            <h3>小学生・中学生</h3>
-            <div class="pd-price">4,000円<small>（税込）</small></div>
-          </div>
-          <div class="pd-card">
-            <h3>幼児</h3>
-            <div class="pd-price">2,000円<small>（税込）</small></div>
-          </div>
-        </div>
-        <div class="pd-info">
-          <strong>応援プランの特典</strong>
-          <ul>
-            <li>2時間の宴会を3時間に延長いたします</li>
-            <li>プロジェクターとスクリーンをご用意。思い出の映像鑑賞をみんなで楽しめます</li>
-            <li>10名様以上の団体様は、28名乗りマイクロバス送迎無料</li>
-          </ul>
-        </div>
-        <div class="pd-info">
-          <ul>
-            <li><strong>飲み放題メニュー</strong>　瓶ビール・ノンアルコールビール・日本酒・ウイスキー・芋焼酎・麦焼酎・レモンサワー・梅酒・赤ワイン・白ワイン・ウーロン茶・オレンジジュース・コーラ・ジンジャーエール</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- 関連ページ -->
-    <div class="plan-section">
-      <h2>宴会場・お料理のご案内</h2>
-      <p class="pd-lead" style="max-width:900px; margin:0 auto 25px; text-align:center;">ホテル丸治では、最大180名様収容の大宴会場「松竹梅」をはじめ、人数に合わせて選べる宴会場・会議室をご用意しています。月替わりの会席料理や立食ブッフェなど、お料理の詳細もあわせてご覧ください。</p>
-      <div class="plan-buttons-grid">
-        <a href="banquet.html" class="btn-plan">宴会場・会議室を見る</a>
-        <a href="food.html" class="btn-plan">会席料理・お料理を見る</a>
-        <a href="contact.html" class="btn-plan">お問い合わせ・ご予約</a>
-      </div>
-    </div>
-
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
   <!-- 電話CTA -->
   <section class="cta-banner">
@@ -648,7 +259,5 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script>Fancybox.bind("[data-fancybox]", {});</script>
 </body>
 </html>
