@@ -128,23 +128,28 @@
   <!-- 告知バー -->
   <a class="promo-bar" href="bounenkai.html"><i class="fas fa-glass-cheers" aria-hidden="true"></i>忘年会プラン 受付中（11/16～12/30）<span class="promo-sub">会席4,500円～／大皿4,000円～・飲み放題あり</span></a>
 
-  <!-- Hero Section -->
-  <section class="hero fade-in">
-    <div class="hero-image-wrapper">
-      <!-- Using original image from maruji.info -->
-      <img src="images/hero_new.jpg" alt="宇都宮の宴会・大型宴会 ホテル丸治" class="hero-image" fetchpriority="high">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <h1 class="hero-title">
+  <!-- オープニング -->
+  <div class="opening" id="opening">
+    <div class="opening-inner">
+      <h1 class="opening-title">
         宇都宮の宴会・大型宴会なら<br>
         <span class="highlight">350年伝承</span>の<span class="kw">東武宇都宮駅前</span><br class="sp-br"> <span class="kw">ホテル丸治</span>
       </h1>
-      <p class="hero-subtitle">あたたかいおもてなしでお客様をお迎え致しております。</p>
-      <div class="hero-cta">
+      <p class="opening-sub">あたたかいおもてなしでお客様をお迎え致しております</p>
+    </div>
+  </div>
+
+  <!-- ヒーロースライダー -->
+  <section class="hero-slider" id="hero-slider" aria-label="おすすめのプラン・イベント">
+    <div class="hs-track" id="hs-track"></div>
+    <button type="button" class="hs-arrow hs-prev" id="hs-prev" aria-label="前のスライド"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <button type="button" class="hs-arrow hs-next" id="hs-next" aria-label="次のスライド"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+    <div class="hs-bottom">
+      <div class="hs-cta">
         <a href="contact.html" class="btn btn-primary btn-lg">宴会・ご予約のお問い合わせ</a>
         <a href="banquet.html" class="btn btn-outline btn-lg">宴会場を見る</a>
       </div>
+      <div class="hs-dots" id="hs-dots"></div>
     </div>
   </section>
 
@@ -590,6 +595,89 @@
     <a class="sc-form" href="/contact.html"><i class="fas fa-envelope" aria-hidden="true"></i>お問い合わせ</a>
   </div>
 
+  <script>
+    (function(){
+      /* ===== ヒーロースライド設定 =====
+         上から優先順（直近イベント→季節プラン）。start/end はその日を含み、
+         end を過ぎたスライドは自動で表示されなくなる。差し替えはこの配列を編集 */
+      var HERO_SLIDES = [
+        { img: 'images/hero_slide_yuzen.jpg',      href: 'news_yuzen/',      badge: '11月10日（火）開催', title: '秋の極上晩餐会「遊膳会」', sub: '創業350年の集大成 極上秋会席 全10品・お1人様15,000円', end: '2026-11-10' },
+        { img: 'images/hero_slide_distillery.jpg', href: 'news_distillery/', badge: '11月14日（土）開催', title: '蒸留所がやってくる 特別な夜', sub: '希少な蒸留酒×特製ブッフェ 8,000円・限定80名様', end: '2026-11-14' },
+        { img: 'images/hero_slide_bounenkai.jpg',  href: 'bounenkai.html',   badge: '受付中 11/16～12/30', title: '忘年会プラン', sub: '会席4,500円～／大皿4,000円～・飲み放題2,500円', end: '2026-12-30' },
+        { img: 'images/hero_slide_osechi.jpg',     href: 'news_osechi/',     badge: 'ご予約受付中', title: '2027年 おせち料理', sub: '二段重25,000円～・数量限定', end: '2026-12-28' },
+        { img: 'images/hero_slide_shinnenkai.jpg', href: 'shinnenkai.html',  badge: '1月2日スタート', title: '新年会プラン', sub: '会席4,500円～／大皿4,000円～・飲み放題2,500円', start: '2026-12-01', end: '2027-02-28' },
+        { img: 'images/hero_slide_ehomaki.jpg',    href: 'news_ehomaki/',    badge: '節分 2月2日・3日お渡し', title: '特製恵方巻', sub: '1本1,000円・数量限定', start: '2026-12-15', end: '2027-02-03' }
+      ];
+      var today = new Date(); today.setHours(0,0,0,0);
+      function d(x){ var p = x.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+      var slides = HERO_SLIDES.filter(function(sl){
+        if (sl.start && today < d(sl.start)) return false;
+        if (sl.end && today > d(sl.end)) return false;
+        return true;
+      });
+      if (!slides.length) slides = [{ img: 'images/hero_new.jpg', href: 'plan.html', badge: '', title: '季節の宴会プラン', sub: '' }];
+
+      var track = document.getElementById('hs-track');
+      var dotsEl = document.getElementById('hs-dots');
+      slides.forEach(function(sl, i){
+        var a = document.createElement('a');
+        a.className = 'hs-slide' + (i === 0 ? ' is-active' : '');
+        a.href = sl.href;
+        a.innerHTML = '<img src="' + sl.img + '" alt="' + sl.title + '"' + (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') + '>' +
+          '<div class="hs-shade"></div>' +
+          '<div class="hs-text">' +
+            (sl.badge ? '<span class="hs-badge">' + sl.badge + '</span>' : '') +
+            '<span class="hs-title">' + sl.title + '</span>' +
+            (sl.sub ? '<span class="hs-sub">' + sl.sub + '</span>' : '') +
+            '<span class="hs-more">詳しく見る <i class="fas fa-arrow-right" aria-hidden="true"></i></span>' +
+          '</div>';
+        track.appendChild(a);
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'hs-dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', (i + 1) + '枚目を表示');
+        dot.addEventListener('click', function(){ go(i); restart(); });
+        dotsEl.appendChild(dot);
+      });
+
+      var cur = 0, timer = null;
+      var items = track.children, dots = dotsEl.children;
+      function go(i){
+        items[cur].classList.remove('is-active'); dots[cur].classList.remove('is-active');
+        cur = (i + slides.length) % slides.length;
+        items[cur].classList.add('is-active'); dots[cur].classList.add('is-active');
+      }
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(){ if (reduced || slides.length < 2 || timer) return; timer = setInterval(function(){ go(cur + 1); }, 6000); }
+      function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+      function restart(){ stop(); start(); }
+      document.getElementById('hs-prev').addEventListener('click', function(){ go(cur - 1); restart(); });
+      document.getElementById('hs-next').addEventListener('click', function(){ go(cur + 1); restart(); });
+      var slider = document.getElementById('hero-slider');
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+      if (slides.length < 2) {
+        document.getElementById('hs-prev').style.display = 'none';
+        document.getElementById('hs-next').style.display = 'none';
+        dotsEl.style.display = 'none';
+      }
+      start();
+
+      /* ===== オープニング（セッション中1回・クリックでスキップ可） ===== */
+      var op = document.getElementById('opening');
+      var shown = false;
+      try { shown = sessionStorage.getItem('marujiOpening') === '1'; } catch(e) {}
+      if (shown || reduced) {
+        op.classList.add('is-skip');
+      } else {
+        try { sessionStorage.setItem('marujiOpening', '1'); } catch(e) {}
+        document.body.classList.add('opening-lock');
+        var close = function(){ op.classList.add('is-done'); document.body.classList.remove('opening-lock'); };
+        setTimeout(close, 2600);
+        op.addEventListener('click', close);
+      }
+    })();
+  </script>
 </body>
 </html>
 
