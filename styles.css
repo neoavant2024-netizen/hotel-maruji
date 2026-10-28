@@ -274,8 +274,8 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 /* Hero */
 .hero {
   position: relative;
-  height: 74vh;
-  min-height: 560px;
+  height: 52vh;
+  min-height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,6 +324,12 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 }
 
 .hero-title .kw { display: inline-block; }
+
+.sp-br { display: none; }
+
+@media (max-width: 576px) {
+  .sp-br { display: inline; }
+}
 
 .hero-title .highlight {
   color: var(--color-accent);
@@ -1397,30 +1403,63 @@ body:not(.subpage) .header:not(.scrolled) .site-logo {
 }
 
 
+/* --- 告知バー --- */
+.promo-bar { display: flex; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; right: 0; z-index: 1001; height: 42px; background: #921E2C; color: #fff; text-align: center; padding: 0 1rem; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; white-space: nowrap; overflow: hidden; }
+.has-promo .header { top: 42px; }
+.has-promo .hero { padding-top: 42px; }
+@media (max-width: 768px) {
+  .has-promo .hero { height: auto; min-height: 0; padding: 175px 0 55px; }
+}
+.promo-bar i { margin-right: 8px; }
+.promo-bar span.promo-sub { font-weight: 400; font-size: 0.85rem; margin-left: 10px; opacity: 0.9; }
+.promo-bar:hover { background: #7a1824; color: #fff; }
+
 /* --- 季節の宴会プラン（ファーストビュー） --- */
-.season-plans { margin-top: -110px; position: relative; z-index: 5; padding-bottom: 0.5rem; }
-.season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-.season-card { display: flex; flex-direction: column; background: var(--color-white); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); text-decoration: none; color: inherit; transition: transform 0.25s ease, box-shadow 0.25s ease; }
-.season-card:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25); }
-.season-card-img { position: relative; aspect-ratio: 16 / 11; overflow: hidden; background: #f3ecdf; }
+.season-plans { padding: 3.2rem 0 3rem; background: var(--color-white); }
+.season-head { text-align: center; margin-bottom: 2rem; }
+.season-eyebrow { display: inline-block; background: #921E2C; color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; padding: 5px 16px; border-radius: 20px; margin-bottom: 0.9rem; }
+.season-head h2 { font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary); margin: 0 0 0.4rem; }
+.season-head h2 span { display: block; font-size: 0.85rem; color: #8c7348; letter-spacing: 3px; margin-top: 0.3rem; }
+.season-head p { color: var(--color-text-light); font-size: 0.95rem; margin: 0; }
+.season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+.season-card { display: flex; flex-direction: column; background: var(--color-white); border: 1px solid #ece5d8; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(90, 74, 47, 0.12); text-decoration: none; color: inherit; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.season-card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(90, 74, 47, 0.22); }
+.season-card-img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #f3ecdf; }
 .season-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease; }
 .season-card:hover .season-card-img img { transform: scale(1.05); }
-.season-badge { position: absolute; top: 10px; left: 10px; background: #921E2C; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 1px; }
-.season-card-body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.3rem; flex: 1; }
-.season-card-body h2 { font-family: var(--font-heading); font-size: 1.12rem; color: var(--color-primary); margin: 0; }
-.season-price { color: #921E2C; font-weight: 700; font-size: 1rem; margin: 0; }
-.season-price small { color: #888; font-weight: 400; font-size: 0.78rem; }
-.season-period { color: #8c7348; font-size: 0.8rem; margin: 0; }
-.season-more { margin-top: auto; padding-top: 0.5rem; color: #8c7348; font-size: 0.85rem; font-weight: 700; }
+.season-badge { position: absolute; top: 12px; left: 12px; background: #921E2C; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 3px; letter-spacing: 1px; box-shadow: 0 2px 6px rgba(0,0,0,0.25); }
+.season-card-body { padding: 1.15rem 1.2rem 1.3rem; display: flex; flex-direction: column; gap: 0.35rem; flex: 1; }
+.season-card-body h3 { font-family: var(--font-heading); font-size: 1.22rem; color: var(--color-primary); margin: 0; }
+.season-price { color: #921E2C; font-weight: 700; font-size: 1.05rem; margin: 0; }
+.season-price small { color: #888; font-weight: 400; font-size: 0.8rem; }
+.season-period { color: #8c7348; font-size: 0.84rem; margin: 0; }
+.season-more { margin-top: auto; padding-top: 0.6rem; color: #8c7348; font-size: 0.88rem; font-weight: 700; }
 .season-more i { font-size: 0.75rem; margin-left: 4px; transition: transform 0.2s ease; }
 .season-card:hover .season-more i { transform: translateX(4px); }
 @media (max-width: 992px) {
   .season-grid { grid-template-columns: repeat(2, 1fr); }
-  .season-plans { margin-top: -70px; }
 }
 @media (max-width: 576px) {
-  .season-grid { gap: 0.8rem; }
-  .season-card-body { padding: 0.8rem 0.85rem 1rem; }
-  .season-card-body h2 { font-size: 0.98rem; }
-  .season-price { font-size: 0.92rem; }
+  .season-plans { padding: 2.4rem 0 2.2rem; }
+  .season-head h2 { font-size: 1.5rem; }
+  .season-grid { gap: 0.9rem; }
+  .season-card-body { padding: 0.85rem 0.9rem 1rem; }
+  .season-card-body h3 { font-size: 1rem; }
+  .season-price { font-size: 0.95rem; }
+  .promo-bar { font-size: 0.82rem; height: 38px; }
+  .hero-title { font-size: 1.3rem; }
+  .hero-title .highlight { font-size: 1.65rem; }
+  .promo-bar span.promo-sub { display: none; }
+  .has-promo .header { top: 38px; }
+}
+
+/* --- スマホ固定CTA（全ページ共通） --- */
+.sticky-cta { display: none; }
+@media (max-width: 768px) {
+  .sticky-cta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.18); }
+  .sticky-cta a { flex: 1; text-align: center; padding: 14px 6px; font-size: 1rem; font-weight: 700; color: #fff; text-decoration: none; }
+  .sticky-cta a i { margin-right: 6px; }
+  .sticky-cta .sc-tel { background: #921E2C; }
+  .sticky-cta .sc-form { background: #8c7348; }
+  body { padding-bottom: 54px; }
 }
