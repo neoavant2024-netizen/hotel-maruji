@@ -182,15 +182,48 @@ ul {
 
 .logo-area {
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .logo-link {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
   text-decoration: none;
-  padding: 0.35rem 0;
-  line-height: 1.25;
+  padding: 0.2rem 0;
+  line-height: 1;
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 1px 8px rgba(0, 0, 0, 0.45));
+}
+
+/* 白ヘッダー（スクロール後・下層ページ）では影を消す */
+.header.scrolled .logo-img,
+.subpage .header .logo-img {
+  filter: none;
+}
+
+/* 初期状態（トップページの上部：暗い背景） */
+.header .logo-white {
+  display: block;
+}
+.header .logo-color {
+  display: none;
+}
+
+/* スクロール後、または下層ページ（白いヘッダー） */
+.header.scrolled .logo-white,
+.subpage .header .logo-white {
+  display: none;
+}
+.header.scrolled .logo-color,
+.subpage .header .logo-color {
+  display: block;
 }
 
 .logo {
@@ -702,6 +735,10 @@ ul {
 @media (max-width: 768px) {
   .header-contact {
     display: none; /* Hide contact in header on mobile */
+  }
+
+  .logo-img {
+    height: 34px;
   }
 
   .logo {
