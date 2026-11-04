@@ -690,6 +690,12 @@ ul {
   transform: translateY(0);
 }
 
+/* 下層ページではコンテンツを初期状態で確実に表示する */
+.subpage .fade-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero-title {

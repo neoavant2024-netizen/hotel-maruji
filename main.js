@@ -59,9 +59,19 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0 });
 
     fadeElements.forEach((el) => observer.observe(el));
+
+    // 画面内にある要素は即時表示
+    requestAnimationFrame(() => {
+      fadeElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('visible');
+        }
+      });
+    });
   }
 
   /* 会席料理の自動スライダー（お料理ページ） */
