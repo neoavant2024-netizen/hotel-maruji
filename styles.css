@@ -208,24 +208,6 @@ ul {
   filter: none;
 }
 
-/* 初期状態（トップページの上部：暗い背景） */
-.header .logo-white {
-  display: block;
-}
-.header .logo-color {
-  display: none;
-}
-
-/* スクロール後、または下層ページ（白いヘッダー） */
-.header.scrolled .logo-white,
-.subpage .header .logo-white {
-  display: none;
-}
-.header.scrolled .logo-color,
-.subpage .header .logo-color {
-  display: block;
-}
-
 .logo {
   font-family: var(--font-heading);
   font-size: 1.55rem;

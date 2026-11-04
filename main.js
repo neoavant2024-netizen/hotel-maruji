@@ -34,10 +34,17 @@
     });
   }
 
-  /* スクロールでヘッダーを白背景に切り替える（トップページのみ。下層は常時白） */
+  /* スクロールでヘッダーを白背景・ロゴを緑金に切り替える（トップページのみ。下層は常時白） */
   const header = document.getElementById('header');
+  const siteLogo = document.getElementById('site-logo');
   if (header && !document.body.classList.contains('subpage')) {
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 50);
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      header.classList.toggle('scrolled', isScrolled);
+      if (siteLogo) {
+        siteLogo.src = isScrolled ? 'images/maruji_logo.svg' : 'images/maruji_logo_white.svg';
+      }
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
