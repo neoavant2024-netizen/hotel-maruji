@@ -7,7 +7,17 @@
   <url><loc>https://maruji.info/shinnenkai.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://maruji.info/shaonkai.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://maruji.info/sotsudan.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://maruji.info/celebration.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://maruji.info/celebration_shichigosan.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/celebration_omiyamairi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/celebration_okuizome.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/celebration_hatsutanjou.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/celebration_hatsuzekku.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/celebration_kaoawase.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/celebration_chouju.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://maruji.info/food.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://maruji.info/food_november.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://maruji.info/food_october.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://maruji.info/food_september.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://maruji.info/food_august.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://maruji.info/bento.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
